@@ -1,38 +1,410 @@
+
 .App {
-  text-align: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--secondary);
+  overflow: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+
+    --primary: #679ae2;
+    --secondary: #232b3b;
+    --territary: #393e46;
+    --fourtary: #1e3347;
+
+    --primary-text: #ffffff;
+    --secondary-text: #DBDCDD;
+
+    --doto: #E9493B;
+    --csgo: #849abd;
+    --volarant: #6FEB6F;
+    --fortnite: #7ed1ed;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+body, * {
+   color: var(--primary-text);
+   scroll-behavior: smooth;
+   scroll-snap-type:inline mandatory;
+   transition: scroll-behavior 10s;
+   font-family: 'Gilroy', sans-serif;
+}
+
+@media (max-width: 767px) {
+  :root {
+      --heading: 24px;
+      --sub-heading: 20px;
+      --big: 16px;
+      --medium: 14px;
+      --small: 12px;
+      --ultra-small: 10px
+    }
+}
+
+/* Styles for tablet devices */
+@media (min-width: 768px) and (max-width: 991px) {
+  :root {
+    --heading: 30px;
+    --sub-heading: 24px;
+    --big: 18px;
+    --medium: 16px;
+    --small: 14px;
+    --ultra-small: 12px
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Styles for desktop devices */
+@media (min-width: 992px) {
+  :root {
+    --heading: 36px;
+    --sub-heading: 28px;
+    --big: 20px;
+    --medium: 18px;
+    --small: 16px;
+    --ultra-small: 14px
+  }
+}
+
+
+
+
+/* -------------------Web View------------------ */
+
+/* ****************** Auth.js ********************* */
+
+.auth {
+  max-width: 500px;
+  /* width: 100vw; */
+  min-width: 0px;
+  height: 100vh;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  /* overflow-y: scroll; */
+ margin-left: auto;
+ margin-right: auto;
+}
+
+.login .app-name {
+  font-weight: bold;
+  margin-bottom: 15px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(100% - 64px);
+  padding: 0px 32px;
+  animation: shadow 2s ease-in-out infinite;
+  font-size: var(--heading);
+}
+
+@keyframes shadow {
+  0% {
+    text-shadow: 0 0 20px rgba(255, 0, 0, 0.5),
+    0 0 30px rgba(255, 0, 0, 0.3),
+    0 0 40px rgba(255, 0, 0, 0.2),
+    0 0 50px rgba(255, 0, 0, 0.1),
+    0 0 60px rgba(255, 0, 0, 0.05);
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(255, 255, 0, 0.5),
+    0 0 30px rgba(255, 255, 0, 0.3),
+    0 0 40px rgba(255, 255, 0, 0.2),
+    0 0 50px rgba(255, 255, 0, 0.1),
+    0 0 60px rgba(255, 255, 0, 0.05);
+  }
+  100% {
+    text-shadow: 0 0 20px rgba(0, 255, 0, 0.5),
+    0 0 30px rgba(0, 255, 0, 0.3),
+    0 0 40px rgba(0, 255, 0, 0.2),
+    0 0 50px rgba(0, 255, 0, 0.1),
+    0 0 60px rgba(0, 255, 0, 0.05);
+  }
+}
+
+.login {
+  background-color: var(--territary);
+  width: 100%;
+  height: max-content;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  min-width: 0px;
+  padding: 32px 0px;
+  border-radius: 0px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;}
+
+.login .header{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: calc(100% - 64px);
+  /* background-color: red; */
+  padding: 0px 32px;
 }
 
-.App-link {
-  color: #61dafb;
+.login .heading {
+  font-size: var(--heading);
+  font-weight: bold;
+  margin-bottom: 5px;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.login .sub-text {
+  font-size: var(--medium);
+}
+
+.login form {
+  width: calc(100% - 64px);
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  min-width: 0px;
+}
+
+.login input {
+  background-color: var(--secondary);
+  border: 0px;
+  height: 30px;
+  margin-bottom: 12px;
+  padding: 5px 10px;
+  text-decoration: none;
+  border-radius: 5px;
+  
+ 
+}
+
+.login input:focus {
+  border: 0px;
+  text-decoration: none;
+  outline: none;
+
+}
+
+button {
+  all: unset;
+}
+
+.login .submit {
+  height: 30px;
+  padding: 5px;
+  background-color: var(--primary);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--small);
+  font-weight: bold;
+  border-radius: 5px;
+  font-size: var(--small);
+  margin-top: 20px;
+}
+
+.login .password, .username, .forgot-password, .new-account {
+  font-size: var(--small);
+  margin-bottom: 5px;
+}
+
+.login .forgot-password,.new-register,.submit {
+  
+  cursor: pointer;
+}
+
+.login .forgot-password {
+  margin-bottom: 0px;
+  margin-top: 5px;
+  color: var(--primary);
+}
+
+.login .new-register {
+  color: var(--primary);
+}
+
+.login .new-account {
+  width: calc(100% - 64px);
+  /* background-color: red; */
+  padding: 0px 32px;
+}
+
+.login .step-nav {
+  width: calc(100% - 64px);
+  /* background-color: red; */
+  padding: 0px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.login .prev,.next {
+   color: var(--primary);
+   cursor: pointer;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-size: var(--small);
+}
+
+/* **************** SignUp ************** */
+
+.Signup .app-name {
+  font-weight: bold;
+  margin-bottom: 15px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(100% - 64px);
+  padding: 0px 32px;
+  animation: shadow 2s ease-in-out infinite;
+  font-size: var(--heading);
+}
+
+.Signup {
+  background-color: var(--territary);
+  width: 100%;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0px;
+  padding: 32px 0px;
+  border-radius: 0px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;}
+
+.Signup .header{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: calc(100% - 64px);
+  /* background-color: red; */
+  padding: 0px 32px;
+}
+
+.Signup .heading {
+  font-size: var(--heading);
+  font-weight: bold;
+  margin-bottom: 5px;
+
+}
+
+.Signup .sub-text {
+  font-size: var(--medium);
+}
+
+.Signup form {
+  width: calc(100% - 64px);
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  min-width: 0px;
+  /* background-color: red; */
+}
+
+.Signup input {
+  background-color: var(--secondary);
+  border: 0px;
+  height: 30px;
+  margin-bottom: 0px;
+  padding: 5px 10px;
+  text-decoration: none;
+  border-radius: 5px;
+ 
+}
+
+.Signup input:focus {
+  border: 0px;
+  text-decoration: none;
+  outline: none;
+
+}
+
+.Signup .submit {
+  height: 30px;
+  padding: 5px;
+  background-color: var(--primary);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--small);
+  font-weight: bold;
+  border-radius: 5px;
+  font-size: var(--small);
+  margin-top: 20px;
+}
+
+.Signup .password, .username, .forgot-password, .new-account {
+  font-size: var(--small);
+  margin-bottom: 5px;
+}
+
+
+.Signup .forgot-password,.new-register,.submit {
+  
+  cursor: pointer;
+}
+
+.Signup .forgot-password {
+  margin-bottom: 10px;
+  color: var(--primary);
+}
+
+.Signup .new-register {
+  color: var(--primary);
+}
+
+.Signup .new-account {
+  width: calc(100% - 64px);
+  /* background-color: red; */
+  padding: 0px 32px;
+}
+
+.Signup .step-nav {
+  width: calc(100% - 64px);
+  /* background-color: red; */
+  padding: 0px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.Signup .prev,.next {
+   color: var(--primary);
+   cursor: pointer;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-size: var(--small);
+}
+
+
+/* Style the date picker input */
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  /* background-color: #fff;  */
+  color: #000000; 
+  font-size: 18px; 
+  padding: 5px; 
+  filter: invert(1) grayscale(100%);
+  border-radius: 50%; 
+  /* border: 1px solid #ccc; */
+}
+
+/* Style the calendar days and set the background color */
+input[type="date"]::-webkit-calendar-picker-indicator::before {
+  color: #333;
+  font-size: 16px;
+  background-color: #000;
+}
+
+/* Style the calendar arrows */
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-clear-button {
+  display: none;
 }
