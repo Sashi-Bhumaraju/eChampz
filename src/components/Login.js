@@ -2,7 +2,9 @@ import React, {useState} from "react";
 import UseInputState from "../hooks/UseInputState";
 import { FcNext, FcPrevious } from "react-icons/fc";
 import { validateEmail, validatePassword } from "../util/Validatation";
-import  SigninByEmail  from "../store/authentication-api/Signin"
+import  SigninByEmail  from "../store/authentication-api/Signin";
+import UseModal from "../hooks/UseModal";
+import Signup from "./Signup";
 
 function Login (props) {
     const [error, setError] = useState("");
@@ -10,7 +12,7 @@ function Login (props) {
     const [passowrd, handlePasssword, resetPassword] = UseInputState("");
     const EMAIL = "email";
     const USERNAME = "username";
-
+    const [showModal, modalComponent] = UseModal(<Signup></Signup>)
 
     const getLoginType = () => {
         if(  validateEmail(username) ) {
@@ -31,11 +33,18 @@ function Login (props) {
             //  username and password login
       }
     }
+
+    
    
+    // const showModal = () => {  
+    //     const modal = document.getElementById("m")     
+    //     modal.showModal()          
+    // }  
     
     // return null;
     return (
         <div className="login">
+           {modalComponent}
             <div className="app-name">eChampz!</div>
             <div className="header">
                 {/* <div className="heading">Welcome!</div> */}
@@ -50,7 +59,9 @@ function Login (props) {
                 <button className="submit" type="submit">Login</button>
             </form>
             <div className="new-account">Need an account? <span onClick={()=>{props.tooglePage(false)}} className="new-register"><b className="new-register">Register</b></span></div>
+            <button onClick={()=>{showModal()}} > show</button>
         </div>
+       
     )
 }
 

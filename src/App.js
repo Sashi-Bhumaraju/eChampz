@@ -1,10 +1,12 @@
 import './App.css';
 import Auth from './components/Auth';
+import NotFound from './components/NotFound';
 
 function App() {
   return (
     <div className="App">
-        <Auth/>
+       {/* <NotFound></NotFound> */}
+       <Auth></Auth>
     </div>
   );
 }
