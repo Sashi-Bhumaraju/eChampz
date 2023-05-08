@@ -24,8 +24,8 @@ function Signup (props) {
 
     const renderedElement = () => {
         switch(step) {
-            case 1: return <> <form > <div className="username" >Email </div>
-                              <input type="email" value={email} onChange={setEmail}  ></input> </form> </>;
+            case 1: return <> <div className="username" >Email </div>
+                              <input type="email" value={email} onChange={setEmail}  ></input> </>;
 
             case 2: return <> <div className="username" >Username </div>
                           <input type="text"  value={username} onChange={setUsername}  ></input></>;

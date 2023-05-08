@@ -384,6 +384,7 @@ button {
   padding: 5px 10px;
   text-decoration: none;
   border-radius: 5px;
+  /* width: 100%; */
  
 }
 
@@ -493,8 +494,14 @@ button {
 
 
 /* Style the date picker input */
+input[type="datetime-local"] {
+  width: calc(100% - 20px);
+  /* padding: 0px; */
+  margin: 0px;
+}
 
 input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+  /* width: 100%; */
   /* background-color: #fff;  */
   color: #000000; 
   font-size: 18px; 
