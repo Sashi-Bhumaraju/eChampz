@@ -5,6 +5,7 @@
   height: max-content; 
   /* overflow: hidden; */ 
   background-color: var(--secondary); 
+  /* background-color: red; */
 }
 
 :root {
@@ -596,14 +597,15 @@ input[type="datetime-local"]::-webkit-clear-button {
   dialog { 
     width: 75%;
   }
-  .login {
+  /* .login {
     min-height: 100vh;
    width: 100%;
     padding: 0%;
-  }
+  } */
   .auth{
     padding: 0px;
     max-width: 100%;
+    margin: 0px 20px;
   }
 }
 

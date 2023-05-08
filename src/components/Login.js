@@ -1,8 +1,6 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState} from "react";
 import UseInputState from "../hooks/UseInputState";
-import { FcNext, FcPrevious } from "react-icons/fc";
-import { validateEmail, validatePassword } from "../util/Validatation";
-import  SigninByEmail  from "../store/authentication-api/Signin";
+import { validateEmail } from "../util/Validatation";
 import UseModal from "../hooks/UseModal";
 import Signup from "./Signup";
 import { useDispatch, useSelector } from "react-redux";
@@ -15,7 +13,6 @@ function Login (props) {
     const [passowrd, handlePasssword, resetPassword] = UseInputState("");
     const EMAIL = "email";
     const USERNAME = "username";
-    const [showModal, modalComponent] = UseModal(<Signup></Signup>)
 
     const dispatch = useDispatch();
     const {isLoading, data, error } = useSelector((state)=> {
@@ -30,6 +27,8 @@ function Login (props) {
         }
     }
 
+    
+
     const handleSubmit = (event) => {
       event.preventDefault();
       if( getLoginType() === EMAIL) {
@@ -39,19 +38,9 @@ function Login (props) {
       }
     }
 
-    // if( isLoading ) {
-    //  return   <div>Loading...</div>
-    // }
-    // if(error ) {
-    // return  <div> { JSON.stringify( error)}</div>
-    // }
     return (
-    
         <div className="login">
-           {modalComponent}
-          
             <div className="app-name">eChampz!</div>
-            {/* {JSON.stringify( data)  } */}
             <div className="header">
                 <div className="sub-text"><b> Login now</b> </div>
             </div>
