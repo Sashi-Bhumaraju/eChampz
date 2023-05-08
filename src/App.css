@@ -1,9 +1,10 @@
 
 .App {
-  width: 100vw;
-  height: 100vh;
-  /* overflow: hidden; */
-  background-color: var(--secondary);
+  width: 100vw; 
+  min-height: 100vh; 
+  height: max-content; 
+  /* overflow: hidden; */ 
+  background-color: var(--secondary); 
 }
 
 :root {
@@ -142,7 +143,9 @@ dialog::backdrop {
   max-width: 500px;
   /* width: 100vw; */
   min-width: 0px;
-  height: 100vh;
+  min-height: calc(100vh - 40px); 
+  padding: 20px 0px;
+  height: max-content; 
   display: flex;
   justify-content:center;
   align-items: center;
