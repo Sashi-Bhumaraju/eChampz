@@ -1,15 +1,12 @@
 import './App.css';
-import Auth from './components/Auth';
-import NotFound from './components/NotFound';
-
-
+import RoutesComponent from './routes/RoutesComponent';
 function App() {
-  return (
-    <div className="App">
-       {/* <NotFound></NotFound> */}
-       <Auth></Auth>
-    </div>
-  );
+  
+  return (  <div className="App">
+                <RoutesComponent/>
+            </div> );
 }
 
 export default App;
+
+

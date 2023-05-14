@@ -9,12 +9,12 @@ function validatePhone(phoneNumber) {
   return regex.test(phoneNumber);
 }
 
-function validateDateFor18Years(dateString) {
+function validateDateFor13Years(dateString) {
   const birthday = new Date(dateString);
   const ageDifferenceInMilliseconds = Date.now() - birthday.getTime();
   const ageDate = new Date(ageDifferenceInMilliseconds);
   const age = Math.abs(ageDate.getUTCFullYear() - 1970);
-  return age >= 18;
+  return age >= 13;
 }
 
 function validatePassword(password) {
@@ -22,4 +22,24 @@ function validatePassword(password) {
   return regex.test(password);
 }
 
-export { validateEmail, validatePassword, validatePhone, validateDateFor18Years };
+function validateUsername(username) {
+  
+  username = username.trim();
+  if (username === '') {
+    return false;
+  }
+  if (!/^[a-zA-Z0-9]+$/.test(username)) {
+    return false;
+  }
+
+  if (username.length < 4 || username.length > 20) {
+    return false;
+  }
+  
+  return true;
+}
+
+
+
+
+export { validateEmail, validatePassword, validatePhone, validateDateFor13Years, validateUsername };
