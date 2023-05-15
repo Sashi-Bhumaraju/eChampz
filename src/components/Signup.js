@@ -7,6 +7,7 @@ import UseThunk from "../hooks/UseThunk";
 import CircularBar from './CircularBar';
 import { validateEmail, validateUsername, validateDateFor13Years, validatePassword } from "../util/Validatation";
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
+import { useNavigate } from "react-router-dom";
 
 
 
@@ -23,6 +24,7 @@ function Signup (props) {
     const [gender,SelectComponent] = UseSelect(["male","female","no mention"]); 
     const [isPasswordOpen, setIsPasswordOpen] = useState(false);
     const [signupUser,signupData, signupLoading, signupError] = UseThunk(SignupUser);
+    const navigate = useNavigate();
     
 
     //  valid input errors hadle variables
@@ -125,6 +127,9 @@ function Signup (props) {
         }
     }
 
+    const goToLogin = () => {
+        navigate("/login");
+    }
     
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -153,7 +158,7 @@ function Signup (props) {
                             { step != 6? <div className="next" onClick={nextStep}> next  <FcNext/> </div> : "" }
                             </div>}
                             
-                        { (!signupData && !signupLoading ) && <div className="new-account">Already have an account? <span className="new-register" onClick={()=>{props.tooglePage(true)}}><b className="new-register">Login</b></span></div>}
+                        { (!signupData && !signupLoading ) && <div className="new-account">Already have an account? <span className="new-register" onClick={goToLogin}><b className="new-register">Login</b></span></div>}
 
                 </div>
             </div>

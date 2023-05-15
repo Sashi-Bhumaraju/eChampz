@@ -6,6 +6,7 @@ import UseThunk from "../hooks/UseThunk";
 import CircularBar from "./CircularBar";
 import { useSelector } from "react-redux";
 import { auth } from "../store/firebase-config";
+import { Navigate, useNavigate } from "react-router-dom";
 
 
 
@@ -16,6 +17,7 @@ function Login (props) {
     const [passowrd, handlePasssword, resetPassword] = UseInputState("");
     const [loginUser, loginData,loginLoading, loginError] = UseThunk(LoginUser);
     const [runGetUser,userData,userDataLaoding,userDataError] = UseThunk(GetUser);
+    const navigate = useNavigate();
        
    
 
@@ -40,9 +42,13 @@ function Login (props) {
         else if( getLoginType() === USERNAME) {  }
     }
 
+    const goToSignup = () => {
+        navigate("/signup");
+    }
+
     useEffect(()=>{
         // console.log("userid:",auth?.currentUser?.uid)
-        
+        console.log(auth.currentUser?.uid,"sasiiiiiiiii ")
         runGetUser(auth.currentUser?.uid);
     },[loginData])
 
@@ -62,11 +68,11 @@ function Login (props) {
                                 <input required autoComplete="off" type="text" value={username} onChange={handleUsername}></input>
                             <div className="password">Password {loginError?  <i  style={{color:"tomato"}}>{err}</i> :'' } </div>
                                 <input  required autoComplete="new-password" type="password" value={passowrd} onChange={handlePasssword}></input>
-                            <button disabled={loginLoading || userDataLaoding}  className="forgot-password">Forgot password?</button>
+                            {/* <button disabled={loginLoading || userDataLaoding}  className="forgot-password">Forgot password?</button> */}
                             <button disabled={loginLoading || userDataLaoding} className="submit" type="submit">{ loginLoading || userDataLaoding?  <CircularBar size={"var(--big)"} stroke={2}></CircularBar> : "Login"}</button>
                         </form>
 
-                        <div  className="new-account">Need an account? <button disabled={loginLoading || userDataLaoding} onClick={()=>{props.tooglePage(false)}} className="new-register"><b className="new-register"> Register</b></button></div>
+                        <div  className="new-account">Need an account? <button disabled={loginLoading || userDataLaoding} onClick={()=>{goToSignup()}} className="new-register"><b className="new-register"> Register</b></button></div>
                         {/* <button disabled={isLoading} onClick={()=>{showModal()}} > show</button> */}
                 </div>
             </div>
