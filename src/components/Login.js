@@ -54,7 +54,7 @@ function Login (props) {
 
     return (
         <div className="auth-container">
-            {JSON.stringify(user)}
+            {/* {JSON.stringify(user)} */}
             <div className="auth">
                 <div className="login">
                     <div className="app-name">eChampz!</div>
