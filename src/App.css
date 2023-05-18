@@ -665,6 +665,7 @@ input[type="datetime-local"]::-webkit-clear-button {
 }
 
 .dashboard-navigation {
+  /* border-right: 1.5px var(--territary) solid; */
   position: relative;
   overflow-y: auto;
   background-color: var(--secondary);
@@ -747,6 +748,8 @@ input[type="datetime-local"]::-webkit-clear-button {
   /* background-color: var(--fourtary); */
 }
 
+.app-bar { display: none;}
+
 @keyframes spin {
   from {
     transform: rotate(0deg);
@@ -822,12 +825,15 @@ input[type="datetime-local"]::-webkit-clear-button {
   }
   
   .dashboard-navigation {
-
+   
+    border-top: 1.5px var(--territary) solid;
     position: fixed;
     bottom: 0;
     left: 0;
     overflow-y: auto;
     background-color: var(--secondary);
+    display: flex;
+    justify-content: center;
      width: max-content;
      min-height: 0px;
      height: 55px;
@@ -846,10 +852,11 @@ input[type="datetime-local"]::-webkit-clear-button {
     /* background-color: red; */
     width: calc(100% - 0px);  
     margin: 0px 0px;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
     height: 100%;
     /* background-color: red; */
+    /* max-width: 450px; */
    
   }
  
@@ -919,14 +926,46 @@ input[type="datetime-local"]::-webkit-clear-button {
   
   .dashboard-content {
     width: max-content;
-    min-height: calc(100vh - 55px);
+    min-height: calc(100vh - 110px);
     /* min-width: 280px; */
     width: calc(100% );
+    display: flex;
+    justify-content: center;
     /* background-color: #007bff; */
     /* background-color: var(--fourtary); */
     margin-bottom: 55px;
+    padding-top: 55px;
   }
 
+  .dashboard-content-container {
+    max-width: 450px;
+  }
+
+  .app-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100vw;
+    height: 55px;
+    border-bottom: 1.5px var(--territary) solid;
+    background-color:  rgba(30, 51, 71, 0.5)
+    /* box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;  */
+  }
+
+  .app-bar-container {
+   
+    /* display: flex; */
+    /* height: 100%; */
+  }
+
+  .app-bar .name {
+  
+    font-size: var(--heading);
+    font-weight: bold;
+  }
 }
 
 /* Styles for tablet devices */
