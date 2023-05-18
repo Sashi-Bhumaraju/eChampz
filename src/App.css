@@ -866,7 +866,7 @@ input[type="datetime-local"]::-webkit-clear-button {
   
   .non-active-nav-link {
     text-decoration : none;
-    font-size : var(--sub-heading);
+    font-size : var(--heading);
     border-radius : 50%;
     display : flex;
     align-items : center;
@@ -886,7 +886,7 @@ input[type="datetime-local"]::-webkit-clear-button {
   
   .non-active-nav-link-profile {
     text-decoration : none;
-    font-size : var(--sub-heading);
+    font-size : var(--heading);
     background-color:transparent;
     border-radius : 50%;
     aspect-ratio: 1/1;
