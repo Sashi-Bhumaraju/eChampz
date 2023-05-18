@@ -824,10 +824,13 @@ input[type="datetime-local"]::-webkit-clear-button {
   .dashboard-navigation {
 
     position: fixed;
+    bottom: 0;
+    left: 0;
     overflow-y: auto;
     background-color: var(--secondary);
      width: max-content;
-     min-height: 60px;
+     min-height: 0px;
+     height: 55px;
      min-width: 100%;
      /* box-shadow: 10px 10px 10px  10px white; */
      box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
@@ -836,6 +839,7 @@ input[type="datetime-local"]::-webkit-clear-button {
   
   .navbar {
   
+    
     display: flex;  
     flex-direction: row;  
     height: max-content;  
@@ -845,6 +849,7 @@ input[type="datetime-local"]::-webkit-clear-button {
     justify-content: space-evenly;
     align-items: center;
     height: 100%;
+    /* background-color: red; */
    
   }
  
@@ -914,12 +919,12 @@ input[type="datetime-local"]::-webkit-clear-button {
   
   .dashboard-content {
     width: max-content;
-    min-height: calc(100vh - 60px);
+    min-height: calc(100vh - 55px);
     /* min-width: 280px; */
     width: calc(100% );
     /* background-color: #007bff; */
     /* background-color: var(--fourtary); */
-    margin-bottom: 60px;
+    margin-bottom: 55px;
   }
 
 }
