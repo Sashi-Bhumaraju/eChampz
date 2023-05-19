@@ -8,7 +8,7 @@ import { LocalStorageGet, LocalStorageSet } from "../../util/LocalStorage";
 const UsersSlice = createSlice({
     name: "user",
     initialState : {
-        data: LocalStorageGet("user") , 
+        data: LocalStorageGet("echampz.user") , 
         isLoading: false,  
         error: null,  
     },
@@ -22,7 +22,7 @@ const UsersSlice = createSlice({
             state.isLoading = false; 
             const data = action.payload;
             // const user = new  User(data.name,data.email,data.bio,data.gender,data.phone,data.dob,data.invitedTournaments,data.myTournaments,data.conductedTournaments,data.profilePic,data.verified);
-           LocalStorageSet("user",data);
+           LocalStorageSet("echampz.user",data);
             state.data = data; 
         }); 
         builder.addCase(GetUser.rejected, (state,action) => { 
