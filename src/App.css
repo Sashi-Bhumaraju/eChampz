@@ -56,21 +56,21 @@ body, * {
 }
 
 
-@media (max-width: 767px) {
+@media (max-width: 700px) { 
   :root {
-      --heading: 24px;
-      --sub-heading: 20px;
-      --big: 16px;
-      --medium: 14px;
-      --small: 12px;
-      --ultra-small: 10px;
+      --heading: 24px; 
+      --sub-heading: 20px; 
+      --big: 16px; 
+      --medium: 14px; 
+      --small: 12px; 
+      --ultra-small: 10px; 
 
-      --nav-width: 220px;
+      --nav-width: 220px; 
     }
 }
 
 
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 701px) and (max-width: 990px) {
   :root {
     --heading: 30px;
     --sub-heading: 24px;
@@ -84,7 +84,7 @@ body, * {
 }
 
 
-@media (min-width: 992px) {
+@media (min-width: 991px) {
   :root {
     --heading: 36px;
     --sub-heading: 28px;
@@ -789,12 +789,13 @@ input[type="datetime-local"]::-webkit-clear-button {
   object-fit: contain;
   background-repeat: no-repeat;
   background-size:cover;
-  mix-blend-mode:luminosity; 
+ 
   height: calc( 250px - 40px);
   border-bottom: 0.5px var(--territary) solid;
   display: flex;
   align-items: center;
   padding: 20px 40px;
+  position: relative;
 }
 
 .profile-pic  {
@@ -814,6 +815,38 @@ input[type="datetime-local"]::-webkit-clear-button {
   margin-left: 20px;
 }
 
+.profile-toggle {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  margin-top: 15px;
+}
+
+.profile-logout {
+  background-color: #8B0000;
+  font-size : var(--small);
+  border-radius : 7px;
+  display : flex;
+  align-items : center;
+  padding : 8px 20px;
+  cursor: pointer;
+  box-shadow: var(--box-shadow-two);
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.profile-edit {
+  background-color: var(--secondary);
+  font-size : var(--small);
+  border-radius : 7px;
+  display : flex;
+  align-items : center;
+  padding : 8px 20px;
+  cursor: pointer;
+  box-shadow: var(--box-shadow-two);
+}
 
 
 .profile-body {
@@ -1036,16 +1069,18 @@ input[type="datetime-local"]::-webkit-clear-button {
    
 }
 
+
 /* Styles for tablet devices */
-@media (min-width: 700px) and (max-width: 991px) {
+@media (min-width: 701px) and (max-width: 990px) {
   .profile-pic {
     width: 90px;
     height: 90px;
   }
 }
 
+
 /* Styles for desktop devices */
-@media (min-width: 992px) {
+@media (min-width: 991px) {
   
 }
 

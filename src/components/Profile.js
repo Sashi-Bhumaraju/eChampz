@@ -2,7 +2,7 @@ import { useSelector } from "react-redux";
 import profileBackground from '../assets/profile-background.jpg';
 import DateTimeFormatter from "../util/DateTimeFormatter";
 import { TbGenderBigender } from 'react-icons/tb';
-import { FaBirthdayCake, FaGenderless } from 'react-icons/fa'
+import { FaBirthdayCake, FaGenderless, FaUserEdit } from 'react-icons/fa'
 
 function Profile () {
 
@@ -21,7 +21,14 @@ function Profile () {
                     <div className="profile-head-body">
                         <div className="profile-username"> {user.name}</div>
                         <div className="profile-email"> {user.email} </div>
+                        
                     </div>
+                    <div className="profile-toggle">
+                    <div className="profile-edit">  <FaUserEdit></FaUserEdit></div>
+                        <div className="profile-logout">Logout</div>
+                      
+                    </div>
+                    
                 </div>
                 <div className="profile-body">
                     <div className="profile-body-item"> <FaGenderless/> &nbsp; {user.gender}</div>
