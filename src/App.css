@@ -856,6 +856,7 @@ input[type="datetime-local"]::-webkit-clear-button {
   margin: 20px;
   box-shadow: var(--box-shadow-two);
   border-radius: 7px;
+  /* border-bottom: 0.5px var(--territary) solid; */
 }
 
 .profile-body-item {
@@ -874,6 +875,18 @@ input[type="datetime-local"]::-webkit-clear-button {
 .profile-body-item:hover {
   background-color: var(--territary);
 }
+
+.profile-alert {
+  height: max-content;
+  background-color: var(--secondary);
+  margin: 30px 20px;
+  box-shadow: var(--box-shadow-two);
+  border-radius: 7px;
+}
+
+
+/* *********** Profile edit ****************** */
+
 
 
 

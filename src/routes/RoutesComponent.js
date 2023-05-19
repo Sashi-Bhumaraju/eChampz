@@ -9,6 +9,7 @@ import Chat from '../components/Chat';
 import NotFound from '../components/NotFound';
 import MyTournaments from '../components/MyTournaments';
 import Profile from '../components/Profile';
+import ProfileEdit from '../components/ProfileEdit';
 
 
 function RoutesComponent ({ component: Component, ...rest }) {
@@ -25,7 +26,10 @@ function RoutesComponent ({ component: Component, ...rest }) {
                         <Route path='tournaments' element={<Tournaments></Tournaments>}/> 
                         <Route path='chat' element={<Chat></Chat>}/> 
                         <Route path='my-tournaments' element={<MyTournaments></MyTournaments>}/> 
-                        <Route path='profile' element={<Profile></Profile>}/> 
+                        <Route path='profile' > 
+                            <Route index element={<Profile></Profile>}></Route>
+                            <Route path='edit' element={<ProfileEdit></ProfileEdit>}></Route>
+                        </Route>
                     </Route>
                     <Route path='*' element={<NotFound></NotFound>}></Route>
               </Routes>
