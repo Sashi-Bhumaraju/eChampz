@@ -796,6 +796,7 @@ input[type="datetime-local"]::-webkit-clear-button {
   align-items: center;
   padding: 20px 40px;
   position: relative;
+  color: white;
 }
 
 .profile-pic  {
