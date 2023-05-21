@@ -11,10 +11,32 @@ function ProfileEdit () {
 
     return (
         <div className="profile-edit">
-            <div className="profile-edit-form">
+            <div className="profile-edit-body">
                 <form>
-                    {/* <div className="label" >Email &nbsp; { notValidEmail? <i  style={{color:"tomato"}}>{" - enter valid email"}</i> :  inputState(emailloading, emaildata, emailerror, 'email already exists', 'available')} </div>
-                    <input type="email" value={email} onChange={(event)=>{ setEmail(event); validateInput(event.target.value); }}  ></input> ; */}
+                    <div className='input-box'>
+                        <div className="label" >Email </div>
+                        <input type="email" value={email} onChange={handleEmail}  ></input> 
+                    </div>
+                    <div className='input-box'>
+                        <div className="label" >Phone </div>
+                        <input type="email" value={email} onChange={handleEmail}  ></input> 
+                    </div>
+                    <div className='input-box'>
+                        <div className="label" >User name </div>
+                        <input type="email" value={email} onChange={handleEmail}  ></input> 
+                    </div>
+                    <div className='input-box'>
+                        <div className="label" >Bio </div>
+                        <input type="email" value={email} onChange={handleEmail}  ></input> 
+                    </div>
+                    <div className='input-box'>
+                        <div className="label" >Date of birth </div>
+                        <input type="email" value={email} onChange={handleEmail}  ></input> 
+                    </div>
+                    <div className='input-box'>
+                        <div className="label" >Gender </div>
+                        <input type="email" value={email} onChange={handleEmail}  ></input> 
+                    </div>
                 </form>
             </div>
         </div>

@@ -888,17 +888,149 @@ input[type="datetime-local"]::-webkit-clear-button {
 /* *********** Profile edit ****************** */
 
 .profile-edit {
-  /* width: 100%; */
+  width: 100%;
   height: max-content;
 }
 
-.profile-edit-form {
+.profile-edit-body {
   /* margin: 20px; */
   /* width: 100%; */
+  background-color: var(--secondary);
+  /* border-radius: 7px;
   height: 100%;
+  box-shadow: var(--box-shadow-two);
+  max-width: 700px; */
+}
+
+   
+.profile-edit form {
+  width: calc(100% - 40px);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  min-width: 0px;
+  /* height: 73px; */
+  /* background-color: red; */
+}
+
+.profile-edit .input-box {
+  display: flex;    
+  flex-direction: row;       
+  justify-content: center;       
+  align-items: center;       
+  margin-bottom: 20px;       
+  /* background-color: red;      */
 }
 
 
+.profile-edit .label {
+  font-weight: bold; 
+  margin-right: 20px;
+  width: 30%;
+  display: flex;
+  justify-content: flex-end;  
+}
+
+.profile-edit input {
+  background-color: var(--secondary);
+  background-color: transparent;
+  border: 0px;
+  height: 30px;
+  margin-bottom: 0px;
+  padding: 5px 10px;
+  text-decoration: none;
+  border-radius: 5px;
+  width: calc(70% - 26px);
+  border : var(--territary) solid 2px;
+ 
+}
+
+
+.profile-edit .password-input-box {
+  width: 100%;
+  /* background-color: red; */
+  position: relative;
+}
+
+.profile-edit .password-input-box-icon {
+  position: absolute;
+  width: var(--heading);
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: red; */
+  aspect-ratio: 1/1;
+  right: var(--ultra-small);
+  cursor: pointer;
+  top: 0;
+}
+
+.profile-edit input:focus {
+  border: 0px;
+  text-decoration: none;
+  outline: none;
+  border : var(--primary) solid 2px;
+
+}
+
+/* SelectBox.css */
+.profile-edit select {
+  width: 100%;
+  padding: 10px;
+  border: 0px solid #ccc;
+  border-radius: 5px;
+  background-color: var(--secondary);
+  font-size: var(--small);
+ 
+}
+
+.profile-edit  select:focus {
+  outline: none;
+  border: 0px solid #007bff;
+  /* box-shadow: 0 0 5px #007bff; */
+}
+ .profile-edit select option {
+  /* background-color: white; */
+  /* color: #333; */
+  padding: 5px 10px;
+  border: none;
+  font-size: var(--small);
+  outline: none;
+  border: 1px solid #00ff88;
+  background-color: white;
+  color: #ef0404;  
+}
+.profile-edit  select option:hover {
+  background-color: #000000;
+  color: rgb(0, 0, 0);
+}
+
+
+
+
+
+.profile-edit .submit {
+  height: 30px;
+  padding: 5px;
+  background-color: var(--primary);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--small);
+  font-weight: bold;
+  border-radius: 5px;
+  font-size: var(--small);
+  margin-top: 0px;
+}
+
+.profile-edit  .password, .label, .forgot-password, .new-account {
+  font-size: var(--small);
+  margin-bottom: 5px;
+  display: flex;
+
+}
 
 
 
