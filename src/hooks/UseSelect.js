@@ -19,7 +19,8 @@ function UseSelect (options,placeholder) {
                         dropdownIndicator: (baseStyles) => ({
                             ...baseStyles,
                             color: "white",
-                            fontSize: "var(--small)"
+                            fontSize: "var(--small)",
+                            width:"100%"
                         
                         }),
 
@@ -31,6 +32,7 @@ function UseSelect (options,placeholder) {
                             color: "white",
                             fontSize: "var(--small)",
                             height:10,
+                            width:"100%",
                             ":focus":{
                                 border:"none"
                             }
@@ -41,7 +43,8 @@ function UseSelect (options,placeholder) {
                             border :"none",
                             borderColor: "none",
                             color: "white",
-                            fontSize: "var(--small)"
+                            fontSize: "var(--small)",
+                            width:"100%"
                         }),
                         option:  (baseStyles, state)=>({
                             ...baseStyles,
@@ -49,6 +52,7 @@ function UseSelect (options,placeholder) {
                             border :"none",
                             borderColor: "none",
                             color: "white",
+                            width:"100%",
                             ":hover" : {
                                 backgroundColor : "var(--primary)"
                             },
@@ -58,6 +62,7 @@ function UseSelect (options,placeholder) {
                         singleValue: (baseStyles, state)=>({
                             ...baseStyles,
                             color:"white",
+                            width:"100%",
                            
                             fontSize: "var(--small)",
                         ":focus":{
@@ -67,6 +72,7 @@ function UseSelect (options,placeholder) {
                         placeholder: (baseStyles)=>({
                             ...baseStyles,
                             fontSize: "var(--small)",
+                            width:"100%"
                         }),
                         
                     }}

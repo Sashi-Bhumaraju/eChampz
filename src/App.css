@@ -893,13 +893,14 @@ input[type="datetime-local"]::-webkit-clear-button {
 }
 
 .profile-edit-body {
-  /* margin: 20px; */
-  /* width: 100%; */
+  margin: 20px;
+  width: 100% - 40px;
   background-color: var(--secondary);
-  /* border-radius: 7px;
+  border-radius: 7px;
   height: 100%;
-  box-shadow: var(--box-shadow-two);
-  max-width: 700px; */
+  /* box-shadow: var(--box-shadow-two); */
+  
+  /* max-width: 700px; */
 }
 
    
@@ -916,7 +917,7 @@ input[type="datetime-local"]::-webkit-clear-button {
 .profile-edit .input-box {
   display: flex;    
   flex-direction: row;       
-  justify-content: center;       
+  justify-content: flex-start;       
   align-items: center;       
   margin-bottom: 20px;       
   /* background-color: red;      */
@@ -926,7 +927,7 @@ input[type="datetime-local"]::-webkit-clear-button {
 .profile-edit .label {
   font-weight: bold; 
   margin-right: 20px;
-  width: 30%;
+  width: 20%;
   display: flex;
   justify-content: flex-end;  
 }
@@ -943,6 +944,10 @@ input[type="datetime-local"]::-webkit-clear-button {
   width: calc(70% - 26px);
   border : var(--territary) solid 2px;
  
+}
+
+.profile-edit .gender-input {
+  width: 70%;
 }
 
 
