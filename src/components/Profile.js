@@ -28,7 +28,7 @@ function Profile () {
                         
                     </div>
                     <div className="profile-toggle">
-                        <div className="profile-edit" onClick={()=>{navigate('/dashboard/profile/edit')}}>  <FaUserEdit></FaUserEdit></div>
+                        <div className="profile-edit-button" onClick={()=>{navigate('/dashboard/profile/edit')}}>  <FaUserEdit></FaUserEdit></div>
                     </div>
                     
                 </div>

@@ -1,4 +1,14 @@
+import { useSelector } from 'react-redux';
+import UseInputState from '../hooks/UseInputState';
 function ProfileEdit () {
+
+    const user = useSelector((state)=>{
+            return state.user.data;
+    })
+
+    const [email, handleEmail, resetEmail] = UseInputState(user.email);
+    const [passowrd, handlePasssword, resetPassword] = UseInputState("");
+
     return (
         <div className="profile-edit">
             <div className="profile-edit-form">
