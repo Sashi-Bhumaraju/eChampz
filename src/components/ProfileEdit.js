@@ -37,14 +37,15 @@ function ProfileEdit () {
                         <input type="email" value={bio} onChange={setBio}  ></input> 
                     </div>
                     <div className='input-box'>
-                        <div className="label" >Date of birth </div>
-                        <input type="datetime-local" onChange={(event)=>{setSelectedDate(event); }} value={selectedDate} min="1980-01-01" max={new Date().toISOString().substring(0,10)} ></input>
-                    </div>
-                    <div className='input-box'>
                         <div className="label" >Gender </div>
                         <div className='gender-input'>   {SelectComponent}</div>
                      
                     </div>
+                    <div className='input-box'>
+                        <div className="label" >Date of birth </div>
+                        <input type="datetime-local" onChange={(event)=>{setSelectedDate(event); }} value={selectedDate} min="1980-01-01" max={new Date().toISOString().substring(0,10)} ></input>
+                    </div>
+                 
                 </form>
             </div>
         </div>

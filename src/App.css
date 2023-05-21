@@ -79,7 +79,7 @@ body, * {
     --small: 14px;
     --ultra-small: 12px;
 
-    --nav-width: 250px;
+    --nav-width: 205px;
   }
 }
 
@@ -887,24 +887,31 @@ input[type="datetime-local"]::-webkit-clear-button {
 
 /* *********** Profile edit ****************** */
 
-.profile-edit {
+.profile-edit { 
   width: 100%;
+  /* height: 100%; */
   height: max-content;
-}
+} 
 
-.profile-edit-body {
+.profile-edit-body { 
+
   margin: 20px;
-  width: 100% - 40px;
+  /* width: 100% - 40px; */
   background-color: var(--secondary);
   border-radius: 7px;
-  height: 100%;
+  /* height: 100% - 40px; */
+  height: max-content;
   /* box-shadow: var(--box-shadow-two); */
   
-  /* max-width: 700px; */
+  /* max-width: 700px; */ 
+  margin-bottom: 100000px;
+ 
+
 }
 
    
-.profile-edit form {
+.profile-edit form { 
+
   width: calc(100% - 40px);
   padding: 20px;
   display: flex;
@@ -912,27 +919,34 @@ input[type="datetime-local"]::-webkit-clear-button {
   min-width: 0px;
   /* height: 73px; */
   /* background-color: red; */
+  /* margin-bottom: 1000px; */
+
 }
 
 .profile-edit .input-box {
+
   display: flex;    
   flex-direction: row;       
   justify-content: flex-start;       
   align-items: center;       
-  margin-bottom: 20px;       
+  margin-bottom: 30px;       
   /* background-color: red;      */
+
 }
 
 
 .profile-edit .label {
+
   font-weight: bold; 
   margin-right: 20px;
   width: 20%;
   display: flex;
   justify-content: flex-end;  
+
 }
 
-.profile-edit input {
+.profile-edit input { 
+
   background-color: var(--secondary);
   background-color: transparent;
   border: 0px;
@@ -957,18 +971,20 @@ input[type="datetime-local"]::-webkit-clear-button {
   position: relative;
 }
 
-.profile-edit .password-input-box-icon {
-  position: absolute;
-  width: var(--heading);
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* background-color: red; */
-  aspect-ratio: 1/1;
-  right: var(--ultra-small);
-  cursor: pointer;
-  top: 0;
+.profile-edit .password-input-box-icon {  
+
+  position: absolute;    
+  width: var(--heading);      
+  height: 100%;      
+  display: flex;    
+  justify-content: center;    
+  align-items: center;     
+  /* background-color: red; */    
+  aspect-ratio: 1/1;   
+  right: var(--ultra-small);   
+  cursor: pointer;    
+  top: 0;   
+
 }
 
 .profile-edit input:focus {
@@ -995,6 +1011,7 @@ input[type="datetime-local"]::-webkit-clear-button {
   border: 0px solid #007bff;
   /* box-shadow: 0 0 5px #007bff; */
 }
+
  .profile-edit select option {
   /* background-color: white; */
   /* color: #333; */
@@ -1226,6 +1243,69 @@ input[type="datetime-local"]::-webkit-clear-button {
     width: 65px;
     height: 65px;
    } 
+
+   /* *************** profile edit **************** */
+
+   .profile-edit .input-box {
+
+    display: flex;    
+    flex-direction: column;       
+    justify-content: flex-start;       
+    align-items: flex-start;       
+    margin-bottom: 30px;       
+    /* background-color: red;      */
+    /* margin-bottom: 100px; */
+  
+  }
+
+  
+.profile-edit .label {
+
+  margin-right: 0px;
+  width: 100%;
+  font-weight: 100;
+  display: flex;
+  justify-content: flex-start;  
+
+}
+
+.profile-edit input { 
+
+  height: none;
+  margin-bottom: 0px;
+  padding: 3px 10px;
+  text-decoration: none;
+  border-radius: 5px;
+  width: calc(100% - 26px);
+  border : var(--territary) solid 2px;
+ 
+}
+.profile-edit .gender-input {
+  width: 100%;
+}
+
+.profile-edit { 
+  width: 100%;
+  /* height: 100%; */
+  height: max-content;
+} 
+
+.profile-edit-body { 
+
+  margin: 0px;
+  background-color: var(--secondary);
+  border-radius: 7px;
+  height: 100% - 0px;
+  border-radius: 0px;
+  /* box-shadow: var(--box-shadow-two); */
+  
+  /* max-width: 700px; */ 
+  margin-bottom: 100000px;
+ 
+
+}
+
+
    
 }
 
