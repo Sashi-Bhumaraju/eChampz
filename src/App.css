@@ -894,7 +894,7 @@ input[type="datetime-local"]::-webkit-clear-button {
   display: flex;
   justify-content: center;
   /* background-color: red; */
-  background-color: var(--fourtary);
+  background-color: var(--secondary);
 } 
 
 .profile-edit-body { 
@@ -970,7 +970,7 @@ width: 700px;
 
 .profile-edit input { 
 
-  background-color: var(--secondary);
+  background-color: var(--territary);
   /* background-color: transparent; */
   border: 0px;
   height: 30px;
