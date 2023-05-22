@@ -1110,6 +1110,7 @@ input[type="datetime-local"]::-webkit-clear-button {
   .dashboard-navigation {
     border-top: 0.5px var(--territary) solid;
     position: fixed;
+    z-index: 100;
     bottom: 0;
     left: 0;
     overflow-y: auto;
@@ -1133,6 +1134,7 @@ input[type="datetime-local"]::-webkit-clear-button {
     justify-content: space-around;
     align-items: center;
     height: 100%;
+   
   }
  
   
@@ -1292,7 +1294,6 @@ input[type="datetime-local"]::-webkit-clear-button {
   height: 100vh;
   border-radius: 0px;
 
-  
 }
 
 
