@@ -894,7 +894,7 @@ input[type="datetime-local"]::-webkit-clear-button {
   display: flex;
   justify-content: center;
   /* background-color: red; */
-  background-color: var(--territary);
+  background-color: var(--fourtary);
 } 
 
 .profile-edit-body { 
@@ -1325,7 +1325,7 @@ width: 700px;
   text-decoration: none;
   border-radius: 5px;
   width: calc(100% - 24px);
-  border : var(--territary) solid 2px;
+  /* border : tr solid 2px; */
  
 }
 .profile-edit .gender-input {
@@ -1337,7 +1337,7 @@ width: 700px;
 .profile-edit-body { 
 
   margin: 0px;
-  background-color: var(--territary);
+  /* background-color: var(--territary); */
   border-radius: 7px;
   min-height: 100vh;
   /* height: 100vh; */
