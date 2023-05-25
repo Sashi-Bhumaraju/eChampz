@@ -6,7 +6,7 @@ function UseIsMobile () {
     const [isMobile, setIsMobile] = useState(true);
 
     const changeScreen = () => {
-        if (window.innerWidth < 701 ) setIsMobile(true) 
+        if (window.innerWidth < 856 ) setIsMobile(true) 
         else setIsMobile(false);
     }
     

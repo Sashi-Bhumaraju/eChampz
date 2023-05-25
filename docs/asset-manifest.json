@@ -1,14 +1,17 @@
 {
   "files": {
-    "main.css": "./static/css/main.42b2bd5e.css",
-    "main.js": "./static/js/main.15643f37.js",
-    "static/media/profile-background.jpg": "./static/media/profile-background.c5043b7cadf19c26fa9e.jpg",
+    "main.css": "./static/css/main.d768e10b.css",
+    "main.js": "./static/js/main.d2b5a263.js",
+    "static/media/dota2.png": "./static/media/dota2.dab075dd37d8059f2206.png",
+    "static/media/volarant.png": "./static/media/volarant.71dd8e27f6d167c7e6f7.png",
+    "static/media/fortnite.png": "./static/media/fortnite.c537047519f276d1133c.png",
+    "static/media/csgo.png": "./static/media/csgo.91bc9368f8dae658bb02.png",
     "index.html": "./index.html",
-    "main.42b2bd5e.css.map": "./static/css/main.42b2bd5e.css.map",
-    "main.15643f37.js.map": "./static/js/main.15643f37.js.map"
+    "main.d768e10b.css.map": "./static/css/main.d768e10b.css.map",
+    "main.d2b5a263.js.map": "./static/js/main.d2b5a263.js.map"
   },
   "entrypoints": [
-    "static/css/main.42b2bd5e.css",
-    "static/js/main.15643f37.js"
+    "static/css/main.d768e10b.css",
+    "static/js/main.d2b5a263.js"
   ]
 }

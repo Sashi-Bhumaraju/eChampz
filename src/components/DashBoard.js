@@ -1,8 +1,8 @@
 import React,{useState} from 'react';
 import { Link, NavLink, Outlet } from 'react-router-dom';
-import Navbar from './Navbar';
+import Navbar from './widgets/Navbar';
 import { useSelector } from 'react-redux';
-import Appbar from './AppBar';
+import Appbar from './widgets/AppBar';
 
 function DashBoard  () {
 

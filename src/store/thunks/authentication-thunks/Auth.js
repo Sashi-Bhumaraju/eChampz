@@ -41,7 +41,8 @@ const SignupUser = createAsyncThunk('user/signup', async (user) => {
 
 const GetUser = createAsyncThunk('user/get', async (uid) => {
     // console.log("this is getting data freom firebase")
-    const docRef = doc(db, "user", uid);
+   
+    const docRef = doc(db, "user", uid); 
     const response = await getDoc(docRef).then((docSnap)=>{
 
         if (docSnap.exists()) {
@@ -49,10 +50,11 @@ const GetUser = createAsyncThunk('user/get', async (uid) => {
             const data = docSnap.data();
             return data;
           } else {
-
             console.log("No such document!");
           }
+
          return docSnap.data(); 
+
     }) .catch(()=>{ console.log("error")})
     return response;
 });

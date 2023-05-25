@@ -1,8 +1,9 @@
 
 // getting local data
 function LocalStorageGet (itemName) {
+    return null
     const data = localStorage.getItem(itemName);
-    if( data ){ return JSON.parse(data);}
+    if( data  ){ return JSON.parse(data);}
     else return null;
 }
 

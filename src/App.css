@@ -18,13 +18,14 @@
     --primary-text: #ffffff;
     --secondary-text: #DBDCDD;
 
-    --doto: #E9493B;
+    --doto2: #e9483a;
     --csgo: #849abd;
     --volarant: #6FEB6F;
     --fortnite: #7ed1ed;
 
     --box-shadow:  rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
     --box-shadow-two:   rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;  
+    --box-shadow-three:  rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
 body, * {
@@ -56,7 +57,7 @@ body, * {
 }
 
 
-@media (max-width: 700px) { 
+@media (max-width: 855px) { 
   :root {
       --heading: 24px; 
       --sub-heading: 20px; 
@@ -70,7 +71,7 @@ body, * {
 }
 
 
-@media (min-width: 701px) and (max-width: 990px) {
+@media (min-width: 856px) and (max-width: 990px) {
   :root {
     --heading: 30px;
     --sub-heading: 24px;
@@ -79,7 +80,7 @@ body, * {
     --small: 14px;
     --ultra-small: 12px;
 
-    --nav-width: 240px;
+    --nav-width: 230px;
   }
 }
 
@@ -656,7 +657,7 @@ input[type="datetime-local"]::-webkit-clear-button {
   flex-direction: row;
   background-color: var(--fourtary);
   
-  background: linear-gradient(to bottom right, var(--fourtary),var(--secondary));
+ 
 }
 
 .dashboard-navigation {
@@ -679,6 +680,7 @@ input[type="datetime-local"]::-webkit-clear-button {
   /* background-color: red; */
   width: calc(100% - 40px);  
   margin: 0px 20px;
+  font-weight: 300;
  
 }
 
@@ -701,7 +703,7 @@ input[type="datetime-local"]::-webkit-clear-button {
 
 .non-active-nav-link {
   text-decoration : none;
-  font-size : var(--medium);
+  font-size : var(--small);
   border-radius : 7px;
   display : flex;
   align-items : center;
@@ -718,7 +720,7 @@ input[type="datetime-local"]::-webkit-clear-button {
 
 .non-active-nav-link-profile {
   text-decoration : none;
-  font-size : var(--medium);
+  font-size : var(--small);
   background-color: var(--fourtary);
   border-radius : 7px;
   display : flex;
@@ -733,18 +735,13 @@ input[type="datetime-local"]::-webkit-clear-button {
 }
 
 
-.dashboard-content {
-  width: max-content;
-  min-height: 100vh;
-  
-  /* min-width: 280px; */
-  width: calc(100% - var(--nav-width));
-  overflow-y: scroll;
-  /* background-color: #007bff; */
-  /* background-color: var(--fourtary); */
-  position: relative;
-  /* background-color: red; */
- 
+.dashboard-content {    
+  width: max-content;    
+  height: 100vh;     
+  width: calc(100% - var(--nav-width));      
+  overflow-y: scroll;      
+  position: relative;      
+  background: linear-gradient(to bottom right, var(--fourtary),var(--secondary));   
 }
 
 .dashboard-content-container {
@@ -973,14 +970,14 @@ width: 700px;
   background-color: var(--territary);
   /* background-color: transparent; */
   border: 0px;
-  height: 30px;
-  margin-bottom: 0px;
-  padding: 5px 10px;
-  text-decoration: none;
-  border-radius: 5px;
+  height: 30px; 
+  margin-bottom: 0px; 
+  padding: 5px 10px; 
+  text-decoration: none; 
+  border-radius: 5px; 
   /* width: calc(60% - 26px); */
-  border : transparent solid 2px;
-  max-width: 700px;
+  border : transparent solid 2px; 
+  max-width: 700px; 
  
 }
 
@@ -1102,12 +1099,143 @@ width: 700px;
  cursor: pointer;
 }
 
+/* ********************************** Tournament List ************************ */
+
+.tournament-list {
+  /* width: auto; */
+  width: 100%;
+  height: max-content;
+  margin-bottom: 100px;
+ 
+
+ 
+}
+
+.tournament-list .grid-container {
+  display: flex;
+  /* width: 100%; */
+  margin-left: auto;
+  margin-right: auto;
+  flex-wrap: wrap;
+  column-gap: 18px;
+  row-gap: 40px;
+  /* justify-content: center; */
+}
+
+/* ************************* Tournament card *****************************  */
+
+.touranament-card {
+  background-color: red;  
+  width: 320px;   
+  aspect-ratio: 1/0.9;   
+  height: max-content;   
+  border-radius: 4px;   
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(0, 0, 0, 0.05) 0px 0px 0px 1px inset;
+  background-color: var(--secondary);   
+}
+
+
+
+.touranament-card .card-image {
+  width: 100%;
+  height: 45%;
+  object-fit:cover;
+  border-radius: 4px 4px 0px 0px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+}
+
+
+
+.touranament-card .card-content {
+  height: calc(55% - 0px); 
+  display: flex;
+  flex-direction: column;
+  padding: 0px;
+  overflow: hidden;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  font-size: var(--ultra-small);
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.touranament-card .user-action { 
+ 
+  /* width: 100%; */
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  /* background-color: red; */
+  padding: 10px 15px;
+  /* margin-top: 20px; */
+  border-top:  0.1px solid var(--fourtary);
+
+
+}
+
+.touranament-card .user-action-icons {
+  font-size: 22px;
+
+}
+
+.touranament-card .card-title {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 15px;
+  
+}
+
+.touranament-card .card-game-name {
+
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+.touranament-card .card-game-prize {
+  
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+
+/* ****************************** Tournaments **************** */
+
+.tournaments {
+  width: 100% - 40px;
+  height: max-content;
+  padding: 0px 20px;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+
+}
 
 
 
 
-@media (max-width: 700px) {
+@media (max-width: 855px) {
+  .touranament-card .card-content {
+    font-size: var(--small);
+    font-weight: bold;
+  }
 
+  .touranament-card .user-action-icons {
+    font-size: var(--sub-heading); }
+
+    .tournaments { 
+      width: 100% - 40px;
+      height: max-content;
+      padding: 0px 20px; }
   dialog { 
      width: 75%;
   }
@@ -1345,16 +1473,38 @@ width: 700px;
 
 }
 
+/* *********** Tournaments List ***************** */
+
+.tournament-list .grid-container {
+  column-gap: 20px;
+  row-gap: 20px;
+  justify-content: center;
+}
+
+/* ************* Tournament card **************** */
+
+.touranament-card {
+  width: 100%;
+  min-width: auto;
+  aspect-ratio: 1/0.8;
+  border-radius: 7px;
+  /* box-shadow: none; */
+}
+
 
    
 }
 
 
 /* Styles for tablet devices */
-@media (min-width: 701px) and (max-width: 990px) {
+@media (min-width: 856px) and (max-width: 990px) {
   .profile-pic {
     width: 90px;
     height: 90px;
+  }
+
+  .touranament-card {
+    width: 280px;
   }
 }
 

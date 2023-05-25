@@ -1,15 +1,15 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import {  Route, Navigate, Routes } from 'react-router-dom';
-import Login from '../components/Login';
-import Signup from '../components/Signup';
+import Login from '../components/screens/Login';
+import Signup from '../components/screens/Signup';
 import DashBoard from '../components/DashBoard';
-import Tournaments from '../components/Tournaments';
-import Chat from '../components/Chat';
-import NotFound from '../components/NotFound';
-import MyTournaments from '../components/MyTournaments';
-import Profile from '../components/Profile';
-import ProfileEdit from '../components/ProfileEdit';
+import Tournaments from '../components/screens/Tournaments';
+import Chat from '../components/screens/Chat';
+import NotFound from '../components/widgets/NotFound';
+import MyTournaments from '../components/screens/MyTournaments';
+import Profile from '../components/screens/Profile';
+import ProfileEdit from '../components/screens/ProfileEdit';
 
 
 function RoutesComponent ({ component: Component, ...rest }) {
