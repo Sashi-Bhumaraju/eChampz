@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "./static/css/main.8f9c9d48.css",
+    "main.css": "./static/css/main.36d12c3e.css",
     "main.js": "./static/js/main.e4117dcd.js",
     "static/media/dota2.png": "./static/media/dota2.dab075dd37d8059f2206.png",
     "static/media/volarant.png": "./static/media/volarant.71dd8e27f6d167c7e6f7.png",
     "static/media/fortnite.png": "./static/media/fortnite.c537047519f276d1133c.png",
     "static/media/csgo.png": "./static/media/csgo.91bc9368f8dae658bb02.png",
     "index.html": "./index.html",
-    "main.8f9c9d48.css.map": "./static/css/main.8f9c9d48.css.map",
+    "main.36d12c3e.css.map": "./static/css/main.36d12c3e.css.map",
     "main.e4117dcd.js.map": "./static/js/main.e4117dcd.js.map"
   },
   "entrypoints": [
-    "static/css/main.8f9c9d48.css",
+    "static/css/main.36d12c3e.css",
     "static/js/main.e4117dcd.js"
   ]
 }
