@@ -12,7 +12,7 @@ function Navbar () {
    
     const isMobile = UseIsMobile();
     const navStyles = ({isActive}) => {
-       return  isActive? "active-nav-link non-active-nav-link" : "non-active-nav-link"
+       return  isActive? " non-active-nav-link active-nav-link" : "non-active-nav-link"
     }
     const user = useSelector((state)=>{
         return state.user.data;
@@ -22,7 +22,7 @@ function Navbar () {
     }
 
     const renderIcons = (icon, text) => {
-       return isMobile? icon : text;
+       return isMobile? icon : <>{icon} &nbsp; {text}</> ;
     }
 
     return (
@@ -33,7 +33,7 @@ function Navbar () {
             <NavLink  className={navStyles} to="/dashboard/tournaments"> {renderIcons(<HiOutlineHome></HiOutlineHome>,'Tournaments') } </NavLink>
             <NavLink className={navStyles} to="/dashboard/chat"> {renderIcons(  <HiOutlineChatAlt></HiOutlineChatAlt>,'chat') } </NavLink>
             <NavLink className={navStyles}  to="/dashboard/my-tournaments">{renderIcons( <AiOutlineTrophy></AiOutlineTrophy>,'My Tournaments') } </NavLink>
-            <NavLink className={navProfileStyles} to="/dashboard/profile">{renderIcons(  <IoPersonCircleOutline></IoPersonCircleOutline>,<>{user.name} <span style={{position:"absolute", right:"15px", height:"100%", display:"flex", justifyContent:"center",alignItems:"center"}}> <IoPersonCircleOutline></IoPersonCircleOutline></span></>) }  </NavLink>
+            <NavLink className={navProfileStyles} to="/dashboard/profile">{renderIcons(  <IoPersonCircleOutline></IoPersonCircleOutline>,<>{user.name} </>) }  </NavLink>
            
         </div>
     )
