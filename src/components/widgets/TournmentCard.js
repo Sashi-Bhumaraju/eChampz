@@ -10,8 +10,8 @@ const TournamentCard = ({ tournament }) => {
 
     return (
         <div className="touranament-card" > 
-          
-            <div  style={{backgroundImage: `url(${GetImagesByName(tournament.gameName)})` }}  alt={tournament.name} className="card-image" />
+          {/* style={{backgroundImage: `url(${GetImagesByName(tournament.gameName)})` }} */}
+            <img src={GetImagesByName(tournament.gameName)}   alt={tournament.name} className="card-image" />
             <div className="card-content" style={{borderTop:`0px solid ${GetGameColor(tournament.gameName,1)}`, background:`linear-gradient(to bottom, ${GetGameColor(tournament.gameName,0.2)}, transparent 70%)`   }}>   
                
                 <div className='card-title'>
