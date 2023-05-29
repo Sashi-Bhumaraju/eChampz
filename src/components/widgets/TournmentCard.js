@@ -5,13 +5,14 @@ import {MdOutlineSaveAlt} from 'react-icons/md'
 import saveImg from  '../../assets/images/save.png'
 import sendImg from '../../assets/images/send.png'
 import GetImagesByName from '../../assets/images/GetImagesByName';
+import dota2 from  '../../assets/images/dota2.jpg'
 
 const TournamentCard = ({ tournament }) => {
 
     return (
         <div className="touranament-card" > 
           {/* style={{backgroundImage: `url(${GetImagesByName(tournament.gameName)})` }} */}
-            <img src={GetImagesByName(tournament.gameName)}   alt={tournament.name} className="card-image" />
+            <img src={dota2}   alt={tournament.name} className="card-image" />
             <div className="card-content" style={{borderTop:`0px solid ${GetGameColor(tournament.gameName,1)}`, background:`linear-gradient(to bottom, ${GetGameColor(tournament.gameName,0.2)}, transparent 70%)`   }}>   
                
                 <div className='card-title'>
