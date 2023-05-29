@@ -11,6 +11,19 @@ import UseThunk from './hooks/UseThunk';
 
 function App() {
 
+  window.addEventListener('click', () => {
+    const element = document.documentElement;
+    if (element.requestFullscreen) {
+        element.requestFullscreen();
+    } else if (element.mozRequestFullScreen) {
+        element.mozRequestFullScreen();
+    } else if (element.webkitRequestFullscreen) {
+        element.webkitRequestFullscreen();
+    } else if (element.msRequestFullscreen) {
+        element.msRequestFullscreen();
+    }
+});
+
   const [RunGetAllTournaments, data, isLoading, iseroor] = UseThunk(GetAllTournaments);
  useEffect(()=>{
   RunGetAllTournaments()

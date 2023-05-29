@@ -1,7 +1,7 @@
-import csgo from './csgo.png';
-import dota2 from './dota2.png';
-import fortnite from './fortnite.png';
-import volarant from './volarant.png';
+import csgo from './csgo.jpg';
+import dota2 from './dota2.jpg';
+import fortnite from './fortnite.jpg';
+import volarant from './volarant.jpg';
 
 function GetImagesByName (gameName) {
     const imageName = gameName.toLowerCase().replace(/\s/g, '');
