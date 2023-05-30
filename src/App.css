@@ -76,14 +76,14 @@ body, * {
       --big: 16px; 
       --medium: 14px; 
       --small: 12px; 
-      --ultra-small: 10px; 
+      --ultra-small: 12px; 
 
       --nav-width: 220px; 
     }
 }
 
 
-@media (min-width: 856px) and (max-width: 990px) {
+@media (min-width: 856px) and (max-width: 1090px) {
   :root {
     --heading: 30px;
     --sub-heading: 24px;
@@ -97,7 +97,7 @@ body, * {
 }
 
 
-@media (min-width: 991px) {
+@media (min-width: 1091px) {
   :root {
     --heading: 36px;
     --sub-heading: 28px;
@@ -1224,7 +1224,7 @@ width: 700px;
 .touranament-card .card-title {
   /* height: 100%; */
   display: flex;
-  font-size: var(--small);
+  font-size: var(--big);
   
  margin-bottom: 4px;
 }
@@ -1246,7 +1246,7 @@ width: 700px;
   margin: 4px; 
   margin-left: 0px; 
   font-size: var(--ultra-small); 
-  font-size: 13px;
+  /* font-size: 13; */
   font-weight: bold; 
 }
 
@@ -1557,7 +1557,7 @@ width: 700px;
 
 
 /* Styles for tablet devices */
-@media (min-width: 856px) and (max-width: 990px) {
+@media (min-width: 856px) and (max-width: 1090px) {
   .profile-pic {
     width: 90px;
     height: 90px;
@@ -1570,7 +1570,7 @@ width: 700px;
 
 
 /* Styles for desktop devices */
-@media (min-width: 991px) {
+@media (min-width: 1091px) {
   
 }
 
