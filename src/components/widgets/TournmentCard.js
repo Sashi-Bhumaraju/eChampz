@@ -10,10 +10,12 @@ import dota2 from  '../../assets/images/dota2.jpg'
 const TournamentCard = ({ tournament }) => {
 
     return (
+      
         <div className="touranament-card" > 
+          {/* {JSON.stringify(tournament)} */}
           {/* style={{backgroundImage: `url(${GetImagesByName(tournament.gameName)})` }} */}
             <div style={{backgroundImage: `url(${GetImagesByName(tournament.gameName)})` }}   alt={tournament.name} className="card-image" />
-            <div className="card-content" style={{borderTop:`3px solid ${GetGameColor(tournament.gameName,1)}`, background:`linear-gradient(to bottom, ${GetGameColor(tournament.gameName,0.2)}, transparent 70%)`   }}>   
+            <div className="card-content" style={{borderTop:`3px solid ${GetGameColor(tournament.gameName,1)}`, background:`linear-gradient(to bottom, ${GetGameColor(tournament.gameName,0.3)}, transparent 100%)`   }}>   
                
                 <div className='card-title'>
                         <div  style={{color:GetGameColor(tournament.gameName,1)}} > {tournament.name}  </div> 
@@ -21,13 +23,13 @@ const TournamentCard = ({ tournament }) => {
                 <div className='card-content-data'>
                         <div className='data'> {tournament.gameName}</div>
                         <div className='data'> {tournament.gameMode}</div>
-                        <div className='data'>{tournament.time}</div>
+                        {/* <div className='data'>{tournament.time}</div> */}
                         <div className='data' style={{color:"green"}}>{tournament.prizeMoney}</div>
-                        <div className='data' >{tournament.numTeams}</div>
+                        <div className='data' >{tournament.noOfTeams}</div>
                 </div>
              
                
-                <div className='user-action' style={{borderTop: `1px solid ${GetGameColor(tournament.gameName,0.1)}`, }} ><div className='user-action-icons'> <span style={{marginLeft:25}}><img style={{width:15, filter:"invert()"}} src={sendImg}/></span> <span style={{marginLeft:20}}><img style={{width:15, filter:"invert()"}} src={saveImg}/></span>   </div></div>
+                <div className='user-action' style={{borderTop: `1px solid ${GetGameColor(tournament.gameName,0.1)}`, }} ><div className='user-action-icons'> <span style={{marginLeft:25}}><img style={{width:18, filter:"invert()  drop-shadow(1px 0px 0px white)"}} src={sendImg}/></span> <span style={{marginLeft:20}}><img style={{width:18,  filter:"invert() drop-shadow(1px 0px 0px white)"}} src={saveImg}/></span>   </div></div>
             </div>    
            
         </div>   

@@ -26,7 +26,7 @@ function App() {
 
   const [RunGetAllTournaments, data, isLoading, iseroor] = UseThunk(GetAllTournaments);
  useEffect(()=>{
-  RunGetAllTournaments()
+  // RunGetAllTournaments()
  },[])
   const t = useSelector((state)=>{
      return state.tournaments.data;

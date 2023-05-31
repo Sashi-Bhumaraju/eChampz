@@ -88,7 +88,7 @@ const tournaments = [
   ];
 
   
-  const TournamentsList = () => {
+  const TournamentsList = ( props ) => {
 
     return (
       <div className='tournament-list'>
@@ -96,9 +96,9 @@ const tournaments = [
         {/* <TournamentCard tournaments={tournaments} /> */}
 
             <div className="grid-container">
-            {tournaments.map(tournament => (
+            {props.tournaments.map(tournament => (
                 <TournamentCard tournament={tournament} />
-            ))}
+            )) }
             </div>
       </div>
     );

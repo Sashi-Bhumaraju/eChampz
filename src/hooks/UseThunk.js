@@ -7,12 +7,17 @@ function UseThunk (thunk) {
         const [data,setData] = useState('');
         const dispatch = useDispatch();
 
+        const reset = () => {
+                setLoading(false);
+                setError(null);
+        }
+
         const runThunk = (args) => {
             setLoading(true);
             setError(null);
             dispatch(thunk(args))
                 .unwrap()
-                .then(d=>setData(d))
+                .then(d=>{setData(d)})
                 .catch(err=>setError(err))
                 .finally(()=>setLoading(false));
         }

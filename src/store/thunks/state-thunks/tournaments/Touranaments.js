@@ -1,4 +1,4 @@
-import { collection, getDocs } from "firebase/firestore";
+import { collection, doc, getDocs } from "firebase/firestore";
 import { db } from "../../../firebase-config";
 import { createAsyncThunk } from "@reduxjs/toolkit";
 
@@ -12,4 +12,17 @@ const GetAllTournaments = createAsyncThunk('tournaments/get', async () => {
     return response;
 });
 
-export {GetAllTournaments};
+const GetTournament = createAsyncThunk('tournament/get', async (tid) => {
+    const ref = doc(db, "tournaments", tid)
+    const response = await getDocs(ref).then((docSnap)=>{
+           if (docSnap.exists()) {
+             return docSnap.data();
+          } else {
+            return null;
+          }
+    }).catch((err)=>err)
+
+    return response;
+});
+
+export {GetAllTournaments,GetTournament};
