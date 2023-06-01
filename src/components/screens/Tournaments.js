@@ -18,7 +18,7 @@ function Tournaments () {
     },[])
 
     return ( <div className="tournaments">
-        {JSON.stringify(allTournaments.length)}
+        {/* {JSON.stringify(allTournaments.length)} */}
                 <TournamentsList tournaments={allTournaments} ></TournamentsList>
                 {isLoading? <CircularBar size={"var(--big)"} stroke={2}></CircularBar>  : '' }
                 {isError? 'error while loading data' : ''}
