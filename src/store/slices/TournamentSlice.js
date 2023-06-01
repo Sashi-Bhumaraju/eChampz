@@ -11,9 +11,10 @@ const TournamentSlice = createSlice({
         builder.addCase(GetAllTournaments.fulfilled, (state,action) => { 
             const data = action.payload;
            
-            state.data.push ( ...data) ; 
+            state.data.push(...data) ; 
            
         }); 
+
     }
 });
 

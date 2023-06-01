@@ -8,20 +8,17 @@ import { useEffect } from "react";
 function Tournaments () {
 
     const [RunGetAllTournaments, data, isLoading, isError] = UseThunk(GetAllTournaments);
-
-    const allTournaments = useSelector((state)=>{
+    const allTournaments = useSelector((state) => {
         return state.tournaments.data;
      })
 
-    useEffect(()=>{
+    useEffect(() => {
         console.log(allTournaments)
         if(allTournaments.length === 0) { RunGetAllTournaments() }
     },[])
 
-  
-
     return ( <div className="tournaments">
-        {/* {JSON.stringify(allTournaments)} */}
+        {JSON.stringify(allTournaments.length)}
                 <TournamentsList tournaments={allTournaments} ></TournamentsList>
                 {isLoading? <CircularBar size={"var(--big)"} stroke={2}></CircularBar>  : '' }
                 {isError? 'error while loading data' : ''}

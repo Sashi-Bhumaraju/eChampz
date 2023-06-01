@@ -10,6 +10,7 @@ import NotFound from '../components/widgets/NotFound';
 import MyTournaments from '../components/screens/MyTournaments';
 import Profile from '../components/screens/Profile';
 import ProfileEdit from '../components/screens/ProfileEdit';
+import TournamentDetails from '../components/screens/TournamentDetails';
 
 
 function RoutesComponent ({ component: Component, ...rest }) {
@@ -23,7 +24,10 @@ function RoutesComponent ({ component: Component, ...rest }) {
                     <Route path="/signup" element={ user? <Navigate to="/dashboard"/> : <Signup/> } />
                     <Route path="/dashboard" element={user? <DashBoard></DashBoard>: <Navigate to="/login"/>} > 
                         <Route index element={ <Navigate to="/dashboard/tournaments"/> }/> 
-                        <Route path='tournaments' element={<Tournaments></Tournaments>}/> 
+                        <Route path='tournaments' > 
+                            <Route index element={<Tournaments></Tournaments>}/>
+                            <Route path=':id' element={<TournamentDetails></TournamentDetails>}/>
+                        </Route>
                         <Route path='chat' element={<Chat></Chat>}/> 
                         <Route path='my-tournaments' element={<MyTournaments></MyTournaments>}/> 
                         <Route path='profile' > 

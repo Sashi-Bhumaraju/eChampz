@@ -8,7 +8,7 @@ const GetAllTournaments = createAsyncThunk('tournaments/get', async () => {
     const response = await getDocs(collection(db, "tournaments")).then((querySnapshot)=>{
            return querySnapshot.docs.map((doc) => doc.data());
     }).catch((err)=>err)
-
+ console.log(response)
     return response;
 });
 
