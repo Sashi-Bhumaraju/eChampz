@@ -97,9 +97,9 @@ const tournaments = [
 
             <div className="grid-container">
             {props.tournaments.map((tournament,idx) => (
-              <>
+            
                 <TournamentCard key={tournament.name} tournament={tournament} />
-                <h1>{idx}</h1></>
+            
             )) }
             </div>
       </div>

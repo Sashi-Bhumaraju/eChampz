@@ -1201,18 +1201,25 @@ width: 700px;
 }
 
 .touranament-card .user-action { 
-  width: 100%;
+  width: calc(100% - 30px);
   position: absolute;
   bottom: 0px;
   right: 0px;
   display: flex; 
   flex-direction: row; 
-  justify-content: flex-end; 
+  justify-content: space-between; 
+  flex-direction: row;
   padding: 10px 15px; 
   /* background-color: var(--secondary); */
   border-radius: 8px;
   border-bottom-right-radius: 10px;
   /* background-color: red; */
+}
+
+.touranament-card .prize-money {
+  display: flex;
+  justify-content: center; 
+  font-size: var(--ultra-small); 
 }
 
 .touranament-card .user-action-icons {
@@ -1248,6 +1255,9 @@ width: 700px;
   font-size: var(--ultra-small); 
   /* font-size: 13; */
   font-weight: bold; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 
