@@ -15,6 +15,7 @@ function GetImagesByName (gameName) {
         case 'joystick': return 'https://firebasestorage.googleapis.com/v0/b/echampz.appspot.com/o/joystick.png?alt=media&token=fceb26c6-edc9-47b8-b101-cbff39559089';
         case 'prize': return 'https://firebasestorage.googleapis.com/v0/b/echampz.appspot.com/o/prize.png?alt=media&token=856dfdfa-c887-4a5b-af92-8a4f43640b4e';
         case 'teams': return 'https://firebasestorage.googleapis.com/v0/b/echampz.appspot.com/o/teams.png?alt=media&token=c79ed97b-e735-4bab-b578-7542ef62657b';
+        case 'start': return 'https://firebasestorage.googleapis.com/v0/b/echampz.appspot.com/o/start.png?alt=media&token=372ea60c-8f48-4546-a55a-7aa45f674b4d';
         default: return 'xxx';
      }
 }

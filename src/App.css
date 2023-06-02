@@ -24,7 +24,7 @@
     --primary:  #1DA1F2;
     /* --secondary:    rgb(15, 15, 15); ; */
      --territary:  black;
-    --fourtary:  rgba(27, 30, 31, 0.43);;
+    --fourtary:  #1b1e1f;;
 
     --primary-text: #ffffff;
     --secondary-text: #DBDCDD;
@@ -770,7 +770,8 @@ input[type="datetime-local"]::-webkit-clear-button {
   overflow-y: scroll;      
   position: relative;     
   background-color: var(--fourtary); 
-  background: linear-gradient(to bottom right, var(--fourtary),var(--secondary));   
+  background: linear-gradient(to bottom right, var(--fourtary),var(--secondary));  
+  /* background: linear-gradient(to bottom right, var(--secondary),rgba(27, 30, 31, 0.5));  */
 }
 
 .dashboard-content-container {
@@ -1214,18 +1215,28 @@ width: 700px;
   border-radius: 8px;
   border-bottom-right-radius: 10px;
   /* background-color: red; */
+  align-items: center;
 }
 
 .touranament-card .prize-money {
   display: flex;
   justify-content: center; 
   font-size: var(--ultra-small); 
+  /* background-color: var(--territary); */
+  /* padding: 4px 10px;  */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px; 
 }
 
 .touranament-card .user-action-icons {
   font-size: 16px;
   border-radius: 8px;
   /* background-color: green; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .touranament-card .card-title {
@@ -1254,7 +1265,7 @@ width: 700px;
   margin-left: 0px; 
   font-size: var(--ultra-small); 
   /* font-size: 13; */
-  font-weight: bold; 
+  font-weight: 500; 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1335,7 +1346,8 @@ width: 700px;
     display: flex;
     flex-direction: column-reverse;
     background-color: var(--fourtary);
-    background: linear-gradient(to bottom right, var(--fourtary),var(--secondary));
+    /* background: linear-gradient(to bottom right, var(--fourtary),var(--secondary)); */
+    /* background: linear-gradient(to bottom right, black,white); */
   }
   
   .dashboard-navigation {

@@ -24,23 +24,30 @@ const TournamentCard = ({ tournament }) => {
           {/* {JSON.stringify(tournament)} */}
           {/* style={{backgroundImage: `url(${GetImagesByName(tournament.gameName)})` }} */}
             <div style={{backgroundImage: `url(${GetImagesByName(tournament.gameName)})` }}   alt={tournament.name} className="card-image" />
-            <div className="card-content" style={{borderTop:`2.5px solid ${GetGameColor(tournament.gameName,1)}`, background:`linear-gradient(to bottom, ${GetGameColor(tournament.gameName,0.1)}, transparent 90%)`   }}>   
+            <div className="card-content" style={{borderTop:`1px solid ${GetGameColor(tournament.gameName,1)}`, background:`linear-gradient(to bottom, ${GetGameColor(tournament.gameName,0.2)}, transparent 70%)`   }}>   
                
                 <div className='card-title'>
                         <div  style={{color:GetGameColor(tournament.gameName,1)}} > {tournament.name}  </div> 
                 </div>   
                 <div className='card-content-data'>
                         <div className='data'> 
-                        <img style={{width:17.5}} src={GetImagesByName('joystick')}/> &nbsp;{tournament.gameName}</div>
-                        <div className='data'> <img style={{width:17.5}} src={GetImagesByName('fight')}/>&nbsp;{tournament.gameMode}</div>
-                        <div className='data' style={{color:"#008000",}}>  <img style={{width:16.5}} src={GetImagesByName('fee')}/>&nbsp;{tournament.prizeMoney}</div>
-                        <div className='data'> <img style={{width:14.5,filter:'invert()'}} src={start}/> &nbsp;{DateTimeFormatter( tournament.timeOfCreation)}</div>
-                        <div className='data' ><img style={{width:17.5}} src={GetImagesByName('teams')}/>&nbsp;{tournament.noOfTeams}</div>
+                        {/* <img style={{width:12}} src={GetImagesByName('joystick')}/> &nbsp; */}
+                        {tournament.gameName}</div>
+                        <div className='data'> 
+                        {/* <img style={{width:12}} src={GetImagesByName('fight')}/>&nbsp; */}
+                        {tournament.gameMode}</div>
+                        <div className='data' style={{color:"#008000",}}>  <img style={{width:12}} src={GetImagesByName('fee')}/>&nbsp;{tournament.prizeMoney}</div>
+                        <div className='data'> <img style={{width:12,filter:'invert()'}} src={GetImagesByName('start')}/> &nbsp;{DateTimeFormatter( tournament.timeOfCreation)}</div>
+                        <div className='data' >
+                            {/* <img style={{width:13}} src={GetImagesByName('teams')}/>&nbsp; */}
+                            {tournament.noOfTeams}</div>
                 </div>
              
                
                 <div className='user-action' style={{borderTop: `1px solid ${GetGameColor(tournament.gameName,0.1)}`, }} >
-                <div className='prize-money' style={{color:'#008000'}} ><img style={{width:17.5, height:17.5, aspectRatio:'1/1'}} src={GetImagesByName('prize')}/>&nbsp;₹{tournament.prizeMoney}</div>
+                <div className='prize-money' style={{color:''}} >
+                    {/* <img style={{width:17.5, height:17.5, aspectRatio:'1/1'}} src={GetImagesByName('prize')}/>&nbsp; */}
+                    ₹{tournament.prizeMoney}</div>
                     <div className='user-action-icons'>
                    
                          <span style={{marginLeft:25}}>
