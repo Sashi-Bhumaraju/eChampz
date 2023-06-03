@@ -4,6 +4,7 @@ import { GetAllTournaments } from "../../store";
 import CircularBar from "../widgets/CircularBar";
 import TournamentsList from "../widgets/TournamentsList";
 import { useEffect } from "react";
+import TournmentCardLoading from "../skeleton/TournmentCardLoading";
 
 function Tournaments () {
 
@@ -17,10 +18,14 @@ function Tournaments () {
         if(allTournaments.length === 0) { RunGetAllTournaments() }
     },[])
 
+    // if(isError) return "error"
+    // if(isLoading) return "loading"
+    // if( data ) return JSON.stringify( data)
+    // if(isLoading) return <TournmentCardLoading count={10} ></TournmentCardLoading>
+
     return ( <div className="tournaments">
-        {/* {JSON.stringify(allTournaments.length)} */}
                 <TournamentsList tournaments={allTournaments} ></TournamentsList>
-                {isLoading? <CircularBar size={"var(--big)"} stroke={2}></CircularBar>  : '' }
+                {isLoading? <TournmentCardLoading count={8} ></TournmentCardLoading> : '' }
                 {isError? 'error while loading data' : ''}
          </div> );
 }

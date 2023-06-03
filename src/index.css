@@ -15,4 +15,9 @@ code {
 
 body, html, * {
   scroll-behavior: smooth;
+   /* background-color: var(--secondary); */
+}
+
+body, html {
+  background-color: var(--secondary);
 }

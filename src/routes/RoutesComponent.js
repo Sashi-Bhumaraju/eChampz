@@ -26,7 +26,7 @@ function RoutesComponent ({ component: Component, ...rest }) {
                         <Route index element={ <Navigate to="/dashboard/tournaments"/> }/> 
                         <Route path='tournaments' > 
                             <Route index element={<Tournaments></Tournaments>}/>
-                            <Route path=':id' element={<TournamentDetails></TournamentDetails>}/>
+                            <Route path=':tid' element={<TournamentDetails></TournamentDetails>}/>
                         </Route>
                         <Route path='chat' element={<Chat></Chat>}/> 
                         <Route path='my-tournaments' element={<MyTournaments></MyTournaments>}/> 

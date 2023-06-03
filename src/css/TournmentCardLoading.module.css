@@ -1,0 +1,100 @@
+.tournament_skeleton_list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.tournament_card {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;    
+    width: 310px;   
+    aspect-ratio: 1/0.8;   
+    height: max-content;   
+    border-radius: 8px;    
+    background-color: var(--secondary);   
+    cursor: pointer; 
+    background: linear-gradient(to bottom ,  var(--territary), var(--secondary)  70%);
+}
+
+.tournament_card_image {
+    width: calc( 100% - 20px );
+     height: calc( 40% - 20px );
+     margin: 10px;
+     border-top-right-radius: 8px;
+     border-top-left-radius: 8px;
+     background-color: (var(--secondary));
+     position: relative;
+     overflow: hidden;
+    background-color: var(--territary);
+}
+
+.tournament_card_content {
+    width: calc( 100% - 20px );
+    /* height: calc(55% - 20px ); */
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-top: solid 2px black;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: center;
+    align-items: flex-start; */
+    gap: 10px;
+    /* background-color: antiquewhite; */
+}
+
+.tournament_card_content_data {
+    width: 100%;
+    height: 15px;
+    border-radius: 30px;
+    background-color: black;
+    overflow: hidden;
+    position: relative;
+}
+
+.tournament_card_content_data2 {
+    width: 50%;
+    height: 15px;
+    border-radius: 30px;
+    background-color: black;
+    overflow: hidden;
+    position: relative;
+}
+
+.tournament_card_content_data_shimmer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, var(--territary), rgba(110, 110, 110, 0.2) ,var(--territary) );
+    top: 0;
+    left : 0;
+    animation: 1.2s loading ease-in-out infinite;
+}
+
+
+
+@keyframes loading {
+   
+
+  0% {
+    left: -100%;
+  }
+  
+  100% {
+    left: 150%;
+  }
+}
+
+
+@media (min-width: 856px) and (max-width: 1090px) {
+    .tournament_card {
+      width: 280px;
+    }
+  }
+
+@media (max-width: 855px) { 
+    .tournament_card {
+        width: 100%;
+        min-width: auto;
+      }
+}  

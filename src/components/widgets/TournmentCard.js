@@ -15,12 +15,17 @@ import dota2 from  '../../assets/images/dota2.jpg'
 import {FaRegMoneyBillAlt} from 'react-icons/fa'
 import {MdSportsEsports} from 'react-icons/md'
 import DateTimeFormatter from '../../util/DateTimeFormatter';
+import { useNavigate } from 'react-router-dom';
 
 const TournamentCard = ({ tournament }) => {
 
+    const navigate = useNavigate();
+    const cardDetailsPage = () => {
+            navigate(tournament.tid)
+    }
+
     return (
-      
-        <div className="touranament-card" > 
+        <div className="touranament-card" onClick={cardDetailsPage} > 
           {/* {JSON.stringify(tournament)} */}
           {/* style={{backgroundImage: `url(${GetImagesByName(tournament.gameName)})` }} */}
             <div style={{backgroundImage: `url(${GetImagesByName(tournament.gameName)})` }}   alt={tournament.name} className="card-image" />
@@ -33,7 +38,11 @@ const TournamentCard = ({ tournament }) => {
                         <div className='data'> 
                         {/* <img style={{width:12}} src={GetImagesByName('joystick')}/> &nbsp; */}
                         {tournament.gameName}</div>
+
+                       
+         
                         <div className='data'> 
+                        
                         {/* <img style={{width:12}} src={GetImagesByName('fight')}/>&nbsp; */}
                         {tournament.gameMode}</div>
                         <div className='data' style={{color:"#008000",}}>  <img style={{width:12}} src={GetImagesByName('fee')}/>&nbsp;{tournament.prizeMoney}</div>
