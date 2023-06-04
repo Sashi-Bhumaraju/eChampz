@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "./static/css/main.ca993c7f.css",
+    "main.css": "./static/css/main.1e8cf0c1.css",
     "main.js": "./static/js/main.239d1626.js",
     "static/media/dota2.jpg": "./static/media/dota2.dab075dd37d8059f2206.jpg",
     "static/media/volarant.jpg": "./static/media/volarant.71dd8e27f6d167c7e6f7.jpg",
@@ -12,11 +12,11 @@
     "static/media/fight.png": "./static/media/fight.946e5393ef502988e983.png",
     "static/media/joystick.png": "./static/media/joystick.63e51efaa9b389e56687.png",
     "index.html": "./index.html",
-    "main.ca993c7f.css.map": "./static/css/main.ca993c7f.css.map",
+    "main.1e8cf0c1.css.map": "./static/css/main.1e8cf0c1.css.map",
     "main.239d1626.js.map": "./static/js/main.239d1626.js.map"
   },
   "entrypoints": [
-    "static/css/main.ca993c7f.css",
+    "static/css/main.1e8cf0c1.css",
     "static/js/main.239d1626.js"
   ]
 }

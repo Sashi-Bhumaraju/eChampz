@@ -37,8 +37,21 @@
     height: max-content;
 }
 
-.tournament_details_navbar {
-    width: 100%;
-}
 
 
+
+@media (min-width: 856px) and (max-width: 1090px) {
+    .tournament_details_image { 
+        height: 200px;
+      }
+  }
+
+@media (max-width: 855px) { 
+    .tournament_details_image { 
+        height: 150px;
+      }
+    
+      .tournament_details_image_overlay_text { 
+        height: calc( 100% - 30px );
+      }
+}  
