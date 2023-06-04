@@ -1,7 +1,44 @@
-.tournament_Details {
-    /* background-color: red; */
+.tournament_details {
     width: 100%;
     min-height: 100vh;
     height: max-content;
+    overflow: hidden;
 }
+
+.tournament_details_image {
+    width: 100%;
+    height: 280px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color:  rgba(0, 0, 0, 0.5);  ; /* Replace with your desired color and opacity */
+    background-blend-mode: overlay;
+}
+
+.tournament_details_image_overlay_text {
+    height: calc( 100% - 50px );
+    width: fit-content;
+    display: flex;
+    align-items: flex-start;
+    margin: 0px 20px;
+    font-weight: bold;
+    flex-direction: column;
+    justify-content: flex-end;
+    font-size: var(--medium);
+}
+
+.tournament_name {
+    font-size: var(--heading);
+}
+
+.tournament_details_body {
+    width: calc( 100% - 0px);
+    /* padding: 20px; */
+    height: max-content;
+}
+
+.tournament_details_navbar {
+    width: 100%;
+}
+
 
