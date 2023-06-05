@@ -28,8 +28,8 @@ const TournamentCard = ({ tournament }) => {
         <div className="touranament-card" onClick={cardDetailsPage} > 
           {/* {JSON.stringify(tournament)} */}
           {/* style={{backgroundImage: `url(${GetImagesByName(tournament.gameName)})` }} */}
-            <div style={{backgroundImage: `url(${GetImagesByName(tournament.gameName)})` }}   alt={tournament.name} className="card-image" />
-            <div className="card-content" style={{borderTop:`1.5px solid ${GetGameColor(tournament.gameName,1)}`, background:`linear-gradient(to bottom, ${GetGameColor(tournament.gameName,0.2)}, transparent 70%)`   }}>   
+            <div style={{backgroundImage: `url(${GetImagesByName(tournament.gameName)})` }}   alt={tournament.name} className="card-image" > <div className='card-image-border' style={{backgroundColor:GetGameColor(tournament.gameName,1)}}></div> </div>
+            <div className="card-content" style={{borderTop:`0px solid ${GetGameColor(tournament.gameName,1)}`, background:`linear-gradient(to bottom, ${GetGameColor(tournament.gameName,0.25)}, transparent 50%)`   }}>   
                
                 <div className='card-title'>
                         <div  style={{color:GetGameColor(tournament.gameName,1)}} > {tournament.name}  </div> 
@@ -45,8 +45,8 @@ const TournamentCard = ({ tournament }) => {
                         
                         {/* <img style={{width:12}} src={GetImagesByName('fight')}/>&nbsp; */}
                         {tournament.gameMode}</div>
-                        <div className='data' style={{color:"#008000",}}>  <img style={{width:12}} src={GetImagesByName('fee')}/>&nbsp;{tournament.prizeMoney}</div>
-                        <div className='data'> <img style={{width:12,filter:'invert()'}} src={GetImagesByName('start')}/> &nbsp;{DateTimeFormatter( tournament.timeOfCreation)}</div>
+                        <div className='data' style={{color:"#008000",}}> ₹{tournament.prizeMoney}</div>
+                        <div className='data'>{DateTimeFormatter( tournament.timeOfCreation)} &nbsp; <img style={{width:12,filter:'invert()'}} src={GetImagesByName('start')}/></div>
                         <div className='data' >
                             {/* <img style={{width:13}} src={GetImagesByName('teams')}/>&nbsp; */}
                             {tournament.noOfTeams}</div>
