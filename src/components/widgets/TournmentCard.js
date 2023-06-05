@@ -16,6 +16,13 @@ import {FaRegMoneyBillAlt} from 'react-icons/fa'
 import {MdSportsEsports} from 'react-icons/md'
 import DateTimeFormatter from '../../util/DateTimeFormatter';
 import { useNavigate } from 'react-router-dom';
+import {BiSend} from 'react-icons/bi'
+import {FiSend} from 'react-icons/fi'
+import {IoIosShareAlt} from "react-icons/io";
+import {BsSave} from 'react-icons/bs'
+import {MdSaveAlt} from 'react-icons/md'
+import {GrSave} from 'react-icons/gr'
+import {HiOutlineSave} from 'react-icons/hi'
 
 const TournamentCard = ({ tournament }) => {
 
@@ -25,16 +32,16 @@ const TournamentCard = ({ tournament }) => {
     }
 
     return (
-        <div className="touranament-card" onClick={cardDetailsPage} > 
+        <div className="touranament-card"  > 
           {/* {JSON.stringify(tournament)} */}
           {/* style={{backgroundImage: `url(${GetImagesByName(tournament.gameName)})` }} */}
-            <div style={{backgroundImage: `url(${GetImagesByName(tournament.gameName)})` }}   alt={tournament.name} className="card-image" > <div className='card-image-border' style={{backgroundColor:GetGameColor(tournament.gameName,1)}}></div> </div>
-            <div className="card-content" style={{borderTop:`0px solid ${GetGameColor(tournament.gameName,1)}`, background:`linear-gradient(to bottom, ${GetGameColor(tournament.gameName,0.25)}, transparent 50%)`   }}>   
+            <div onClick={cardDetailsPage} style={{backgroundImage: `url(${GetImagesByName(tournament.gameName)})` }}   alt={tournament.name} className="card-image" > <div className='card-image-border' style={{backgroundColor:GetGameColor(tournament.gameName,1)}}></div> </div>
+            <div onClick={cardDetailsPage} className="card-content" style={{borderTop:`0px solid ${GetGameColor(tournament.gameName,1)}`, background:`linear-gradient(to bottom, ${GetGameColor(tournament.gameName,0.25)}, transparent 50%)`   }}>   
                
                 <div className='card-title'>
                         <div  style={{color:GetGameColor(tournament.gameName,1)}} > {tournament.name}  </div> 
                 </div>   
-                <div className='card-content-data'>
+                <div className='card-content-data' >
                         <div className='data'> 
                         {/* <img style={{width:12}} src={GetImagesByName('joystick')}/> &nbsp; */}
                         {tournament.gameName}</div>
@@ -53,20 +60,23 @@ const TournamentCard = ({ tournament }) => {
                 </div>
              
                
-                <div className='user-action' style={{borderTop: `1px solid ${GetGameColor(tournament.gameName,0.1)}`, }} >
+              
+            </div>    
+            <div className='user-action' style={{borderTop: `1px solid ${GetGameColor(tournament.gameName,0.1)}`, }} onClick={()=>{}}>
                 <div className='prize-money' style={{color:''}} >
                     {/* <img style={{width:17.5, height:17.5, aspectRatio:'1/1'}} src={GetImagesByName('prize')}/>&nbsp; */}
                     ₹{tournament.prizeMoney}</div>
                     <div className='user-action-icons'>
+                     {/* <BiSend></BiSend> */}
+                     <span className='icon'>    <HiOutlineSave></HiOutlineSave></span>
+                     <span className='icon'>  <FiSend></FiSend></span>
+                    
+                    
+                  
                    
-                         <span style={{marginLeft:25}}>
-                            <img style={{width:17.5, filter:"invert() drop-shadow(1px 0px 0px white)"}} src={sendImg}/></span> 
-                        <span style={{marginLeft:25}}>
-                            <img style={{width:17.5, filter:"invert() drop-shadow(1px 0px 0px white)"}} src={saveImg}/></span>  
+                       
                      </div>
                     </div>
-            </div>    
-           
         </div>   
     );
 

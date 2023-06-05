@@ -722,8 +722,12 @@ input[type="datetime-local"]::-webkit-clear-button {
   display : flex;
   align-items : center;
   padding : 13px 20px;
- 
+ font-weight: bold;
   /* background-color: red; */
+}
+
+.non-active-nav-link:hover {
+  color: var(--primary);
 }
 
 .non-active-nav-link:hover{
@@ -1181,6 +1185,7 @@ width: 700px;
   border-radius: 3px;   
   background-color: var(--secondary);   
   cursor: pointer;
+  position: relative;
 }
 
 
@@ -1197,13 +1202,14 @@ width: 700px;
   position: relative;
   display: flex;
   align-items:flex-end;
+  justify-content: center;
 }
 
 
 
 .touranament-card .card-content {
 
-  height: calc(65% - 20px); 
+  height: calc(45% - 20px); 
   overflow: hidden;
   letter-spacing: 1px;
   word-spacing: 2px;
@@ -1211,57 +1217,64 @@ width: 700px;
   font-weight: bold;
   display: flex;
   flex-direction: column; 
-  position: relative;
-
+  
+background-color: red;
 }
 
 .card-image-border {
-  /* color: var(--primary); */
+
   position: relative;
-  width: 100%;
+  width: 99%;
   height: 2px;
   border-radius: 50px;
+
 }
 
 
 
 
 .touranament-card .user-action { 
+  height: calc(20% - 20px);
   width: calc(100% - 30px);
-  position: absolute;
-  bottom: 0px;
-  right: 0px;
+ 
   display: flex; 
   flex-direction: row; 
   justify-content: space-between; 
   flex-direction: row;
   padding: 10px 15px; 
-  /* background-color: var(--secondary); */
   border-radius: 3px;
-  border-bottom-right-radius: 10px;
-  /* background-color: red; */
   align-items: center;
+  pointer-events: none;
+  z-index: 100;
+  background-color: var(--secondary);
+ /* background-color: var(--territary); */
+
 }
 
 .touranament-card .prize-money {
   display: flex;
   justify-content: center; 
-  font-size: var(--ultra-small); 
+  font-size: var(--medium); 
   /* background-color: var(--territary); */
   /* padding: 4px 10px;  */
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 30px; 
+  font-weight: 500;
 }
 
 .touranament-card .user-action-icons {
-  font-size: 16px;
+  font-size: var(--medium);
   border-radius: 8px;
-  /* background-color: green; */
+  font-weight: 500;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.touranament-card .icon {
+  margin-left: 30px;
 }
 
 .touranament-card .card-title {
@@ -1276,6 +1289,7 @@ width: 700px;
 .touranament-card .card-content-data {
   display: flex;
   flex-wrap: wrap;
+  /* background-color: red; */
   /* background-color: red; */
  
 }

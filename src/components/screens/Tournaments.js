@@ -24,8 +24,9 @@ function Tournaments () {
     // if(isLoading) return <TournmentCardLoading count={10} ></TournmentCardLoading>
 
     return ( <div className="tournaments">
+         {/* <TournmentCardLoading count={10} ></TournmentCardLoading> */}
                 <TournamentsList tournaments={allTournaments} ></TournamentsList>
-                {isLoading? <TournmentCardLoading count={8} ></TournmentCardLoading> : '' }
+                {isLoading? <TournmentCardLoading count={3} ></TournmentCardLoading> : '' }
                 {isError? 'error while loading data' : ''}
          </div> );
 }

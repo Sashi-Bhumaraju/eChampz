@@ -1,27 +1,29 @@
 import { useParams } from 'react-router-dom';
 import styles from '../../css/TournamentDetails.module.css';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import UseThunk from '../../hooks/UseThunk';
 import { GetTournamentById } from '../../store';
 import GetImagesByName from '../../assets/images/GetImagesByName';
 import GetGameColor from '../../assets/colors/Colors';
 import DateTimeFormatter from '../../util/DateTimeFormatter'
-import UseNavigation from '../../hooks/UseNavigation';
+import Tabbar from '../widgets/Tabbar';
+import Overview from '../widgets/Overview';
+import { components } from 'react-select';
 
 function TournamentDetails () {  
     const { tid } = useParams();
     const [runGetTournamentById, data, isLoading, isError] = UseThunk(GetTournamentById)
-    const component = UseNavigation ( { links: ['Overview','Chat','Participants'] ,components: ['Overview', 'Chat', 'Participants']})
+    const tabbarLinks = ['Overview','Chat','Participants']
     useEffect(()=>{
         runGetTournamentById(tid);
     },[]);
 
+
     if(isLoading) return "loading";
     if(isError) return JSON.stringify(isError);
-    
 
-    if (data) 
-    
+    if (data) {
+    const overView = <Overview gameName={data.gameName} maxTeams={data.maxTeams}></Overview>
     return (<div className={styles.tournament_details}>
 
                 <div className={styles.tournament_details_image} style={{backgroundImage: `url(${GetImagesByName(data.gameName)})`, borderBottom:`0px solid ${GetGameColor(data.gameName,1)}` }}>
@@ -33,9 +35,9 @@ function TournamentDetails () {
                 </div>
 
                 <div className={styles.tournament_details_body}>
-               {component}
+                <Tabbar links={ tabbarLinks } components={[overView,'chat','participants']} ></Tabbar>
                 </div>
-            </div>)   
+            </div>)   }
 } 
 
 export default TournamentDetails;
