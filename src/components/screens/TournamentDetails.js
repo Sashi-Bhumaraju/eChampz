@@ -9,6 +9,8 @@ import DateTimeFormatter from '../../util/DateTimeFormatter'
 import Tabbar from '../widgets/Tabbar';
 import Overview from '../widgets/Overview';
 import { components } from 'react-select';
+import TournamentDetailsLoading from '../skeleton/TournamentDetailsLoading';
+import NotConnected from '../widgets/NotConnected';
 
 function TournamentDetails () {  
     const { tid } = useParams();
@@ -19,11 +21,11 @@ function TournamentDetails () {
     },[]);
 
 
-    if(isLoading) return "loading";
-    if(isError) return JSON.stringify(isError);
-
+    if(isLoading) return <TournamentDetailsLoading></TournamentDetailsLoading>;
+    if(isError) return <NotConnected></NotConnected>;
+    if(data.gameName == undefined) return "slow internet"
     if (data) {
-    const overView = <Overview gameName={data.gameName} maxTeams={data.maxTeams}></Overview>
+    const overView = <Overview gameName={data.gameName} maxTeams={data.maxTeams} timeOfCreation={data.timeOfCreation} tournamentTime={data.tournamentTime} prizeMoney={data.prizeMoney} tourneyDetails={data.tourneyDetails} ></Overview>
     return (<div className={styles.tournament_details}>
 
                 <div className={styles.tournament_details_image} style={{backgroundImage: `url(${GetImagesByName(data.gameName)})`, borderBottom:`0px solid ${GetGameColor(data.gameName,1)}` }}>

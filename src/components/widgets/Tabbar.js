@@ -7,13 +7,14 @@ function Tabbar ({ links, components }) {
        return (idx === currentComponent)? styles.tabbar_item+" "+styles.active : styles.tabbar_item
    }
    
-   return <div className={styles.tanbar_container}>
-    <div className={styles.tabbar} >
-        {links.map((link,idx)=>{return <div  className={getLinkClass(idx)} onClick={()=>setCurrentComponent(idx)}> {link} </div> })} 
-    </div>
-  
-   {components[currentComponent]}
-   </div> 
+    return <div className={styles.tanbar_container}>
+                <div className={styles.tabbar} >
+                    {links.map((link,idx)=>{return <div  className={getLinkClass(idx)} onClick={()=>setCurrentComponent(idx)}> {link} </div> })} 
+                </div>
+                <div className={styles.tabbar_body }>
+                    {components[currentComponent]}
+                </div>
+            </div> 
 }
 
 export default Tabbar;

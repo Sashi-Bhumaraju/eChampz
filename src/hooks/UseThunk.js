@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 
 function UseThunk (thunk) {
         const [loading, setLoading] = useState(false);
-        const [error, setError] = useState(null);
+        const [error, setError] = useState(false);
         const [data,setData] = useState('');
         const dispatch = useDispatch();
 

@@ -1,22 +1,13 @@
 {
   "files": {
-    "main.css": "./static/css/main.41e14eed.css",
-    "main.js": "./static/js/main.8a3cddc3.js",
-    "static/media/dota2.jpg": "./static/media/dota2.dab075dd37d8059f2206.jpg",
-    "static/media/volarant.jpg": "./static/media/volarant.71dd8e27f6d167c7e6f7.jpg",
-    "static/media/fortnite.jpg": "./static/media/fortnite.c537047519f276d1133c.jpg",
-    "static/media/csgo.jpg": "./static/media/csgo.91bc9368f8dae658bb02.jpg",
-    "static/media/prize.png": "./static/media/prize.3ed5e60b175215ebaf9a.png",
-    "static/media/teams.png": "./static/media/teams.39288b41e4dd0f78e3d4.png",
-    "static/media/fee.png": "./static/media/fee.bdcab906974880d548ba.png",
-    "static/media/fight.png": "./static/media/fight.946e5393ef502988e983.png",
-    "static/media/joystick.png": "./static/media/joystick.63e51efaa9b389e56687.png",
+    "main.css": "./static/css/main.3af7c688.css",
+    "main.js": "./static/js/main.a38cfacc.js",
     "index.html": "./index.html",
-    "main.41e14eed.css.map": "./static/css/main.41e14eed.css.map",
-    "main.8a3cddc3.js.map": "./static/js/main.8a3cddc3.js.map"
+    "main.3af7c688.css.map": "./static/css/main.3af7c688.css.map",
+    "main.a38cfacc.js.map": "./static/js/main.a38cfacc.js.map"
   },
   "entrypoints": [
-    "static/css/main.41e14eed.css",
-    "static/js/main.8a3cddc3.js"
+    "static/css/main.3af7c688.css",
+    "static/js/main.a38cfacc.js"
   ]
 }

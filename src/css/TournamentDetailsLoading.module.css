@@ -1,0 +1,129 @@
+.tournament_details { 
+    width: 100%; 
+    min-height: 100vh; 
+    height: max-content; 
+    overflow: hidden; 
+    animation: 1s blur ease-in infinite;  
+}
+
+.tournament_details_image { 
+    width: 100%;
+    height: 280px;
+   
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color:  rgba(0, 0, 0, 0.5);  ; /* Replace with your desired color and opacity */
+    background-blend-mode: overlay;
+}
+
+.tournament_details_image_overlay_text {
+    height: calc( 100% - 50px );
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    margin: 0px 20px;
+    font-weight: bold;
+    flex-direction: column;
+    justify-content: flex-end;
+    font-size: var(--medium);
+}
+
+.tournament_big_name {
+    font-size: var(--heading);
+    width: 50%;
+    height: 18%;
+    background-color: var(--territary);
+    margin-bottom: 10px;
+    border-radius: 3px;
+}
+
+.tournament_small_name {
+    font-size: var(--heading);
+    width: 40%;
+    height: 11%;
+    background-color: var(--territary);
+    margin-bottom: 10px;
+    border-radius: 3px;
+}
+
+.tabbar {
+    width: 100%;
+    min-height: 30px;
+    height: 4vw;
+    max-height: 45px;
+    background-color:rgba(0, 0, 0, 0.1);
+   
+
+}
+
+.tournament_details_body {
+    width: 100%;
+    /* padding: 20px; */
+    /* height: 500px; */
+    /* background-color: red; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+   
+   
+    padding: 40px 0px;
+    /* background: linear-gradient(to bottom,rgba(0, 0, 0, 0.2), var(--secondary) 40%) ; */
+}
+
+.tournament_details_body_name {
+
+    font-size: var(--heading);  
+    width: 60%;   
+    min-height: 20px;    
+    height: 3vw;   
+    max-height: 40px;
+    background-color:rgba(0, 0, 0, 0.5);  
+    margin-bottom: 5px;   
+    margin: 3px 20px;   
+    border-radius: 3px;
+
+}
+
+.tournament_details_body_name2 {
+    font-size: var(--heading);
+    width: 40%;
+    min-height: 15px;    
+    height: 2vw;   
+    max-height: 30px;
+    background-color:rgba(0, 0, 0, 0.5);
+    margin-bottom: 10px;
+    margin: 3px 20px;
+    border-radius: 3px;
+
+}
+
+
+@media (min-width: 856px) and (max-width: 1090px) {
+    .tournament_details_image { 
+        height: 200px;
+      }
+  }
+
+@media (max-width: 855px) { 
+    .tournament_details_image { 
+        height: 180px;
+      }
+    
+      .tournament_details_image_overlay_text { 
+        height: calc( 100% - 30px );
+      }
+}  
+
+@keyframes blur { 
+    0% {
+      opacity: 0.3;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+     opacity: 0.3;
+    }
+  }

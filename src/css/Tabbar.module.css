@@ -43,3 +43,21 @@
     width: 100%;
     height: max-content;
 }
+
+.tabbar_body {
+    width: calc(100% - 40px); 
+    padding:20px 20px; 
+}
+
+@media (min-width: 856px) and (max-width: 1090px) {
+    .tournament_details_image { 
+        height: 200px;
+      }
+  }
+
+@media (max-width: 855px) { 
+    .tabbar_body {
+        width: calc(100% - 30px); 
+        padding:15px 15px; 
+    }
+}   

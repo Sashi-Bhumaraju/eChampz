@@ -2,16 +2,7 @@ import React from 'react';
 import GetGameColor from '../../assets/colors/Colors';
 import { TbShare3 } from 'react-icons/tb';
 import {MdOutlineSaveAlt} from 'react-icons/md'
-import saveImg from  '../../assets/images/save.png'
-import sendImg from '../../assets/images/send.png'
-import joystick from '../../assets/images/joystick.png'
-import fee from '../../assets/images/fee.png'
-import prize from '../../assets/images/prize.png'
-import fight from '../../assets/images/fight.png'
-import teams from '../../assets/images/teams.png'
-import start from '../../assets/images/start.png'
 import GetImagesByName from '../../assets/images/GetImagesByName';
-import dota2 from  '../../assets/images/dota2.jpg'
 import {FaRegMoneyBillAlt} from 'react-icons/fa'
 import {MdSportsEsports} from 'react-icons/md'
 import DateTimeFormatter from '../../util/DateTimeFormatter';

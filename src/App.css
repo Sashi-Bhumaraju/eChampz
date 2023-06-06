@@ -1455,10 +1455,25 @@ background-color: red;
     /* filter: invert(); */
    
     /* border: none; */
-    border-top: 3px solid var(--primary);
+    /* border-top: 3px solid var(--primary); */
     padding: 2px 5px;
- border-left: none;
+    border-left: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
+
+  
+.active-nav-link::before {
+  content: "";
+  position: absolute;
+  left: none;
+  top: 0px;
+  height: 2px;
+  background-color: var(--primary);
+  width: 100%;
+  border-radius: 10px;
+}
   
   .non-active-nav-link-profile {
     text-decoration : none;
@@ -1613,6 +1628,7 @@ background-color: red;
   font-size: var(--sub-heading);
 }
 
+ 
 
    
 }
