@@ -33,7 +33,7 @@ function Navbar () {
             <NavLink  className={navStyles} to="/dashboard/tournaments"> {renderIcons(<HiOutlineHome></HiOutlineHome>,'Tournaments') } </NavLink>
             <NavLink className={navStyles} to="/dashboard/chat"> {renderIcons(  <HiOutlineChatAlt></HiOutlineChatAlt>,'chat') } </NavLink>
             <NavLink className={navStyles}  to="/dashboard/my-tournaments">{renderIcons( <AiOutlineTrophy></AiOutlineTrophy>,'My Tournaments') } </NavLink>
-            <NavLink className={navProfileStyles} to="/dashboard/profile">{renderIcons(  <IoPersonCircleOutline></IoPersonCircleOutline>,<>{user.name} </>) }  </NavLink>
+            <NavLink className={navStyles} to="/dashboard/profile">{renderIcons(  <IoPersonCircleOutline></IoPersonCircleOutline>,<>{user.name} </>) }  </NavLink>
            
         </div>
     )

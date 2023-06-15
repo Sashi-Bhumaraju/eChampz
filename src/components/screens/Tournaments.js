@@ -5,12 +5,13 @@ import CircularBar from "../widgets/CircularBar";
 import TournamentsList from "../widgets/TournamentsList";
 import { useEffect } from "react";
 import TournmentCardLoading from "../skeleton/TournmentCardLoading";
+import Games from "../widgets/Games";
 
 function Tournaments () {
 
     const [RunGetAllTournaments, data, isLoading, isError] = UseThunk(GetAllTournaments);
     const allTournaments = useSelector((state) => {
-        return state.tournaments.data;
+        return state.tournaments.allTournaments;
      })
 
     useEffect(() => {
@@ -23,12 +24,15 @@ function Tournaments () {
     // if( data ) return JSON.stringify( data)
     // if(isLoading) return <TournmentCardLoading count={10} ></TournmentCardLoading>
 
-    return ( <div className="tournaments">
+    return ( 
+        <div>  <Games></Games>
+    <div className="tournaments">
          {/* <TournmentCardLoading count={10} ></TournmentCardLoading> */}
+              
                 <TournamentsList tournaments={allTournaments} ></TournamentsList>
                 {isLoading? <TournmentCardLoading count={3} ></TournmentCardLoading> : '' }
                 {isError? 'error while loading data' : ''}
-         </div> );
+         </div> </div>);
 }
 
 export default Tournaments;

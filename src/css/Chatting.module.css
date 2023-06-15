@@ -1,0 +1,117 @@
+.chatting {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    /* width:500px; */
+}  
+
+.chatting_container {
+    width: 100%;
+    height: calc(100% - 45px);
+    /* height: max-content; */
+    margin-bottom: 45px;
+    /* overflow-y:auto; */
+    
+    flex-direction: column;
+    display: flex;
+} 
+  
+.message_container {   
+    width: calc( 100% - 10px );  
+    display: flex;   
+    font-size: var(--ultra-small);   
+    padding: 1px 5px;   
+    margin-bottom: 0px;  
+    flex-direction: column;  
+    justify-content: center; 
+    align-self: flex-end; 
+    scroll-behavior: smooth;
+}  
+
+.username {
+    font-weight: bold;
+    font-size:  var(--ultra-small);  
+    color: var(--primary);
+    margin-bottom: 2px;
+    cursor: pointer;
+}
+
+.time { 
+    /* display: none; */ 
+    font-size: 8px;
+    margin-top: 2px;
+    color: rgb(211, 211, 211);
+}
+  
+.sent {  
+  width: fit-content;     
+  padding: 7px 10px;    
+  border-radius: 10px;      
+  border-top-right-radius: 0px;       
+  border-bottom-right-radius: 10px;  
+  margin-top: 6px;    
+  background-color: var(--primary);      
+  align-self:last baseline;       
+}
+
+.received {
+    width: fit-content;
+    padding: 7px 10px;    
+    border-radius: 10px;      
+    border-top-left-radius: 0px;       
+    border-bottom-left-radius: 10px;   
+    margin-top: 6px;
+    background-color: var(--territary);
+    align-self: flex-start;
+}
+
+
+.same_user {
+    border-radius: 10px;  
+    margin-top: 0px;
+ }
+
+.send_message_container {
+    width:calc(100% - 20px);
+    padding: 0px 10px;
+    background-color: var(--territary);
+   
+    position: absolute;
+    height: 45px;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    font-size: var(--ultra-small);
+}
+
+.send_message_text_box {
+    width: 100%;
+    background-color: var(--territary);
+    border: 0px; 
+    outline: none;
+    /* height: 30px; */
+    padding: 5px 20px;
+    text-decoration: none;
+    border-radius: 100px;
+  }
+  
+.send_message_text_box:focus {
+    border: 0px;
+    text-decoration: none;
+    outline: none;
+  
+  }
+
+.send_message_button {
+   font-size: var(--big);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin:0px 10px;
+   cursor: pointer;
+}  
+  

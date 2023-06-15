@@ -19,7 +19,7 @@ const GetTournamentById = createAsyncThunk('tournament/get', async (tid) => {
     const ref = doc(db, "tournaments", tid)
     const response = await getDoc(ref).then((docSnap)=>{
            if (docSnap.exists()) {
-              return docSnap.data();
+              return {...docSnap.data(), tid: docSnap.id};
            } else {
               return null;
            }

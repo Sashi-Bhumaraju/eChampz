@@ -1,6 +1,6 @@
 import React from 'react';
 import TournamentCard from './TournmentCard';
-
+import styles from '../../css/Games.module.css'
  
 const tournaments = [
     {
@@ -92,7 +92,7 @@ const tournaments = [
 
     return (
       <div className='tournament-list'>
-        <h2>Tournaments</h2>
+        <div className={styles.tournaments_heading}>Tournaments</div>
         {/* <TournamentCard tournaments={tournaments} /> */}
 
             <div className="grid-container">

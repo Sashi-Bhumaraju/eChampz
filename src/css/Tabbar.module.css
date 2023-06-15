@@ -3,6 +3,7 @@
     display: flex;
     background-color: var(--secondary);
     overflow-x:auto;
+    text-decoration: none;
 }
 
 .tabbar_item {
@@ -16,6 +17,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    text-decoration: none;
 }
 
 .tabbar_item:hover {

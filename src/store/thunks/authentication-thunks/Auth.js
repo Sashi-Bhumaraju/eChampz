@@ -48,7 +48,7 @@ const GetUser = createAsyncThunk('user/get', async (uid) => {
         if (docSnap.exists()) {
             console.log("Document data:", docSnap.data());
             const data = docSnap.data();
-            return data;
+            return {...data, uid : uid};
           } else {
             console.log("No such document!");
           }

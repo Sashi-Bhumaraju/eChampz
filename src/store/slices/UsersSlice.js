@@ -22,7 +22,7 @@ const UsersSlice = createSlice({
             state.isLoading = false; 
             const data = action.payload;
             // const user = new  User(data.name,data.email,data.bio,data.gender,data.phone,data.dob,data.invitedTournaments,data.myTournaments,data.conductedTournaments,data.profilePic,data.verified);
-           LocalStorageSet("echampz.user",data);
+           LocalStorageSet("echampz.user",data); 
             state.data = data; 
         }); 
         builder.addCase(GetUser.rejected, (state,action) => { 

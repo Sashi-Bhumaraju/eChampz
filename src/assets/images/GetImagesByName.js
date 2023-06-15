@@ -13,14 +13,6 @@ function GetImagesByName (gameName) {
         case 'prize': return 'https://firebasestorage.googleapis.com/v0/b/echampz.appspot.com/o/prize.png?alt=media&token=856dfdfa-c887-4a5b-af92-8a4f43640b4e';
         case 'teams': return 'https://firebasestorage.googleapis.com/v0/b/echampz.appspot.com/o/teams.png?alt=media&token=c79ed97b-e735-4bab-b578-7542ef62657b';
         case 'start': return 'https://firebasestorage.googleapis.com/v0/b/echampz.appspot.com/o/start.png?alt=media&token=372ea60c-8f48-4546-a55a-7aa45f674b4d';
-        case 'calendericon': return 'https://firebasestorage.googleapis.com/v0/b/echampz.appspot.com/o/calender.png?alt=media&token=07134929-c051-48e6-aace-b0e89f3383cb';
-        case 'prizeicon': return 'https://firebasestorage.googleapis.com/v0/b/echampz.appspot.com/o/prize.png?alt=media&token=99145e3f-bf4c-4eae-a824-1df24a0e1248';
-        case 'teamicon': return 'https://firebasestorage.googleapis.com/v0/b/echampz.appspot.com/o/team.png?alt=media&token=caf9eaea-4f6d-4603-91b1-bee3553f7ab5';
-        case 'timeicon': return 'https://firebasestorage.googleapis.com/v0/b/echampz.appspot.com/o/time.png?alt=media&token=dcca53bd-dc87-44ae-860e-cabfde022a61';
-        case 'volaranticon': return 'https://firebasestorage.googleapis.com/v0/b/echampz.appspot.com/o/volarant-icon.png?alt=media&token=126ea89d-e177-46f1-8007-31371dadc330';
-        case 'fortniteicon': return 'https://firebasestorage.googleapis.com/v0/b/echampz.appspot.com/o/fortnite-icon.png?alt=media&token=a703a1f0-dcb4-4626-a6d0-b4d60a024099';
-        case 'dotaicon': return 'https://firebasestorage.googleapis.com/v0/b/echampz.appspot.com/o/dota-icon.png?alt=media&token=f06fb528-3111-46e5-aa00-657a67827f47';
-        case 'csgoicon': return 'https://firebasestorage.googleapis.com/v0/b/echampz.appspot.com/o/csgo-icon.png?alt=media&token=5191e6af-4c22-4c66-b78f-a54171cba887';
         default: return 'xxx';
      }
 }
@@ -38,6 +30,7 @@ function GetIconByName (iconName) {
        case 'fortnite': return 'https://firebasestorage.googleapis.com/v0/b/echampz.appspot.com/o/fortnite-icon.png?alt=media&token=a703a1f0-dcb4-4626-a6d0-b4d60a024099';
        case 'dota2': return 'https://firebasestorage.googleapis.com/v0/b/echampz.appspot.com/o/dota-icon.png?alt=media&token=f06fb528-3111-46e5-aa00-657a67827f47';
        case 'csgo': return 'https://firebasestorage.googleapis.com/v0/b/echampz.appspot.com/o/csgo-icon.png?alt=media&token=5191e6af-4c22-4c66-b78f-a54171cba887';
+       case 'entryfee': return 'https://firebasestorage.googleapis.com/v0/b/echampz.appspot.com/o/fees.png?alt=media&token=a104c212-feb4-4acf-8bdd-4b05bba5a43c';
        default: return 'xxx';
     }
 }

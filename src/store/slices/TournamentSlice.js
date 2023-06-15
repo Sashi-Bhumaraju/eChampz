@@ -1,17 +1,27 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { GetAllTournaments } from "../thunks/state-thunks/tournaments/Touranaments";
+import { GetAllTournaments, GetTournamentById } from "../thunks/state-thunks/tournaments/Touranaments";
+import { enableMapSet } from 'immer';
+enableMapSet();
 
 const TournamentSlice = createSlice({
     name: "Tournaments",
     initialState : {
-        data: [] ,  
+        allTournaments: [] ,  
+        allDetailedTournaments: new Map(),
     },
     reducers : {},
     extraReducers(builder) { 
         builder.addCase(GetAllTournaments.fulfilled, (state,action) => { 
             const data = action.payload;
            
-            state.data.push(...data) ; 
+            state.allTournaments.push(...data) ; 
+            state.allDetailedTournaments.set(data.tid,data); 
+           
+        }); 
+
+        builder.addCase(GetTournamentById.fulfilled, (state,action) => { 
+            const data = action.payload;
+            state.allDetailedTournaments.set(data.tid,data); 
            
         }); 
 
