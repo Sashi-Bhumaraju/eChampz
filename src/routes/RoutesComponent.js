@@ -17,6 +17,7 @@ import Participants from '../components/widgets/Participants';
 import Matches from '../components/widgets/Matches';
 import Rules from '../components/widgets/Rules';
 import ChatHome from '../components/screens/ChatHome';
+import GameDetails from '../components/screens/GameDetails';
 
 
 function RoutesComponent ({ component: Component, ...rest }) {
@@ -30,7 +31,7 @@ function RoutesComponent ({ component: Component, ...rest }) {
                     <Route path="/login" element={ user? <Navigate to="/dashboard"/> : <Login/> } />
                     <Route path="/signup" element={ user? <Navigate to="/dashboard"/> : <Signup/> } />
                     <Route path="/dashboard" element={user? <DashBoard></DashBoard>: <Navigate to="/login"/>} > 
-                        <Route index element={ <Navigate to="tournaments" replace /> }/> 
+                        <Route index element={ <Navigate to="tournaments"  /> }/> 
                         <Route path='tournaments' > 
                             <Route index element={<Tournaments></Tournaments>}/>
                             <Route path=':tid' element={<TournamentDetails></TournamentDetails>}>
@@ -40,8 +41,13 @@ function RoutesComponent ({ component: Component, ...rest }) {
                                 <Route path='participants' element={<Participants/>} />
                                 <Route path='matches' element={<Matches/>} />
                                 <Route path='rules' element={<Rules/>} />
-                            </Route>    
+                            </Route>   
+                            <Route path='game'>
+                                    <Route index element={ <Navigate to="/dashboard/tournaments" replace /> }/>
+                                    <Route path=':gid'  element={ <GameDetails/>}/>
+                            </Route>
                         </Route>
+                           
                         <Route path='chat' element={<ChatHome></ChatHome>}/> 
                         <Route path='my-tournaments' element={<MyTournaments></MyTournaments>}/> 
                         <Route path='profile' > 

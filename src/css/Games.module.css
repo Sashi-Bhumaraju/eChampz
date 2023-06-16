@@ -52,6 +52,9 @@
     width: 30px;
     height: 30px;
     filter: invert();
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 .tournaments_heading {

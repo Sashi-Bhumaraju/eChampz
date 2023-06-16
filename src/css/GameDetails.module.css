@@ -1,0 +1,74 @@
+.game_details {
+    width: calc( 100%  - 40px);
+    margin: 20px;
+    min-height: calc( 100vh - 40px);;
+    height: max-content;
+    overflow: hidden;
+}
+
+.game_details_image {
+    width: 100%; 
+    height: 280px; 
+    border-radius: 5px; 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    background-position: center; 
+    background-color:  rgba(0, 0, 0, 0.5);  ; /* Replace with your desired color and opacity */
+    background-blend-mode: overlay; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.game_details_image_overlay_text {
+    height: max-content;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.game_name {
+    font-size: var(--ultra-small);
+    font-weight: bold;
+    display: none;
+}
+
+.icon {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 40px;
+    height: 40px;
+    filter: invert();
+    /* background-color: green; */
+   
+}
+
+.game_details_body {
+    width: calc( 100% - 0px);
+    /* padding: 20px; */
+    height: max-content;
+}
+
+
+
+@media (min-width: 856px) and (max-width: 1090px) {
+    .game_details_image { 
+        height: 200px;
+      }
+  }
+
+@media (max-width: 855px) { 
+    .game_details_image { 
+        height: 180px;
+      }
+    
+      .game_details_image_overlay_text { 
+        height: calc( 100% - 30px );
+      }
+}  
