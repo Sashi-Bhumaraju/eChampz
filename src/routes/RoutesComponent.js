@@ -34,7 +34,7 @@ function RoutesComponent ({ component: Component, ...rest }) {
                         <Route path='tournaments' > 
                             <Route index element={<Tournaments></Tournaments>}/>
                             <Route path=':tid' element={<TournamentDetails></TournamentDetails>}>
-                            <Route index element={<Navigate to="overview" replace />} />
+                                <Route index element={<Navigate to="overview" replace />} />
                                 <Route path='overview' element={<Overview></Overview>} />
                                 <Route path='chat' element={<Chat></Chat>} />
                                 <Route path='participants' element={<Participants/>} />

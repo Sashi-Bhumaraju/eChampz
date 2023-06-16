@@ -30,18 +30,18 @@
     min-width: 130px;
     aspect-ratio: 1/1.5;
     /* height: 90px; */
-    /* background-color: gray; */
+    background-color: var(--secondary);
     /* height: max-content;    */
     border-radius: 3px;
     background-position: center;
     background-repeat: no-repeat;
-    background-color: var(--secondary);
     background-size: cover;
     margin-right: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    animation: 1s blur ease-in infinite;  
 }
 
 .add_tournament {
@@ -51,7 +51,8 @@
 .game_icon {
     width: 30px;
     height: 30px;
-    filter: invert();
+    background-color: var(--territary);
+    border-radius: 5px;
 }
 
 .tournaments_heading {
@@ -59,3 +60,27 @@
     font-weight: bold;
     padding: 15px 0px;
 }
+
+@keyframes loading {
+    0% {
+      left: -100%;
+    }
+    50% {
+    left:  150%
+    }
+    100% {
+      left: -100%;
+    }
+  }
+  
+  @keyframes blur { 
+    0% {
+      opacity: 0.3;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+     opacity: 0.3;
+    }
+  }

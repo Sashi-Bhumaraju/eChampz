@@ -5,6 +5,7 @@ import { useSelector } from 'react-redux';
 import UseThunk from '../../hooks/UseThunk';
 import { GetAllGames } from '../../store';
 import { GetIconByName } from '../../assets/images/GetImagesByName';
+import GamesLoading from '../skeleton/GamesLoading';
 
 function Games () {
 
@@ -14,7 +15,7 @@ function Games () {
   const [getGames, data, isLoading, isError] = UseThunk(GetAllGames);
 
   useEffect( () => {
-            if (games!= null) getGames();
+            if (games.length === 0) getGames();
         },[])
 
   
@@ -22,7 +23,7 @@ function Games () {
         <div className={styles.games }>
             <div className={styles.game_heading}>Games</div>
             <div id='games_scroll' className={styles.games_scroll}>
-                { isLoading? 'loading' : null}
+                { isLoading? <GamesLoading count={4}/> : null}
                 {/* { (!isLoading && !isError)? <div className={ styles.add_tournament }>Add Tournament</div> : null} */}
                 { (!isLoading && !isError)?  games.map((game)=><div className={styles.game_card} style={{backgroundImage:`url(${game.gameImageUrl})`}}> <img className = {styles.game_icon} src={GetIconByName(game.gameName)}></img> </div>): null}
             </div>

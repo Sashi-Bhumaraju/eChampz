@@ -243,6 +243,25 @@ dialog::backdrop {
   }
 }
 
+
+@keyframes shadow2 {
+  0% {
+    color: rgba(255, 99, 71,0.5);
+  }
+  25% {
+    color: rgba(0, 255, 136,0.5);
+  }
+  50% {
+   color: rgba(29, 161, 242,0.5);
+  }
+  75% {
+    color: rgba(0, 255, 136,0.5);
+   }
+   100% {
+    color: rgba(255, 99, 71,0.5);
+   }
+}
+
 .login {
   background-color: var(--territary);
   width: 100%;
@@ -706,18 +725,19 @@ input[type="datetime-local"]::-webkit-clear-button {
 
 .navbar .app-name {
   font-weight: bold;
-  margin: 18px 10px;
-  margin-bottom: 30px;
+  margin: 5px 10px;
+  /* margin-bottom: 10px; */
   width: 100%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  width: calc(100% - 64px);
-  padding: 0px 0px;
-  /* animation: shadow 2s ease-in-out infinite; */
+  width: calc(100% - 40px);
+  /* animation: shadow2 2s ease-in infinite; */
   font-size: var(--sub-heading);
   color: var(--primary);
-  padding : 13px 20px;
+  padding : 13px 10px;
+  text-shadow: 0 0 20px rgb(0, 0, 0)
+ 
 }
 
 .non-active-nav-link {
@@ -789,6 +809,7 @@ input[type="datetime-local"]::-webkit-clear-button {
 
 
 .dashboard-content {    
+  scrollbar-gutter: stable;
   width: max-content;    
   height: 100vh;     
   width: calc(100% - var(--nav-width));      
