@@ -117,16 +117,16 @@ body, * {
 
 
 dialog {
-  padding: 0px 0px;
-  
   border: 0px;
+  outline: none;
   border-radius: 6px;
-  max-width: 300px;
+  z-index: 999999999999999999;
   min-width: 0px;
    width: auto;
    font-size: var(--small);
    font-weight: bold;
-   background-color: var(--territary);
+   background-color: var(--secondary);
+   
    /* box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px; */
  
   }
@@ -134,10 +134,9 @@ dialog {
   
 
 dialog::backdrop {
-  background-color: rgba(35, 43, 59,0.5);
-  background-color: rgba(0, 0, 0,0.5);
-  padding: 20px;
-  
+  background-color: rgba(0, 0, 0, 0.3);
+  /* background-color: rgba(196, 196, 196, 0.2); */
+  padding: 0px;
 }
 
 .modal-heading {

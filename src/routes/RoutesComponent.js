@@ -18,6 +18,7 @@ import Matches from '../components/widgets/Matches';
 import Rules from '../components/widgets/Rules';
 import ChatHome from '../components/screens/ChatHome';
 import GameDetails from '../components/screens/GameDetails';
+import Modal from '../components/widgets/Modal';
 
 
 function RoutesComponent ({ component: Component, ...rest }) {
@@ -43,8 +44,10 @@ function RoutesComponent ({ component: Component, ...rest }) {
                                 <Route path='rules' element={<Rules/>} />
                             </Route>   
                             <Route path='game'>
-                                    <Route index element={ <Navigate to="/dashboard/tournaments" replace /> }/>
-                                    <Route path=':gid'  element={ <GameDetails/>}/>
+                                <Route index element={ <Navigate to="/dashboard/tournaments" replace /> }/>
+                                <Route path=':gid' element={<GameDetails/>} >
+                                    <Route path='create-touranament' element={<Modal></Modal>}></Route>
+                                </Route>
                             </Route>
                         </Route>
                            

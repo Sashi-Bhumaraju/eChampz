@@ -12,12 +12,13 @@ function UseModal (children) {
       
    const modalBox = (
         <dialog id='modal-data'> 
+        {children}
         {/* {children} <button onClick={closeModal}>close</button> */}
-        <div className='modal-heading'>echampz wants you to login to application</div>
+        {/* <div className='modal-heading'>echampz wants you to login to application</div>
         <div className='modal-buttons'>   
             <div className='modal-no' onClick={closeModal} > Cancel</div>   
             <div className='modal-yes'>Yeah</div>  
-        </div>
+        </div> */}
         </dialog>    
     )    
     return [showModal,modalBox]; 
