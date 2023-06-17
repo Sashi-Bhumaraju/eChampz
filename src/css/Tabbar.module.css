@@ -4,11 +4,13 @@
     background-color: var(--secondary);
     overflow-x:auto;
     text-decoration: none;
+    scrollbar-width: 0px;
 }
 
 .tabbar_item {
     width: max-content;
     padding: 13px 25px;
+    min-width: fit-content;
     cursor: pointer;
     font-weight: bold;
     font-size: var(--medium);
