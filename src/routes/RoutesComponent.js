@@ -46,7 +46,7 @@ function RoutesComponent ({ component: Component, ...rest }) {
                             <Route path='game'>
                                 <Route index element={ <Navigate to="/dashboard/tournaments" replace /> }/>
                                 <Route path=':gid' element={<GameDetails/>} >
-                                    <Route path='create-touranament' element={<Modal></Modal>}></Route>
+                                    <Route path=':modalType' element={<Modal></Modal>}></Route>
                                 </Route>
                             </Route>
                         </Route>

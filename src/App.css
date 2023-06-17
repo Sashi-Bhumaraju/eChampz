@@ -116,28 +116,7 @@ body, * {
 }
 
 
-dialog {
-  border: 0px;
-  outline: none;
-  border-radius: 6px;
-  z-index: 999999999999999999;
-  min-width: 0px;
-   width: auto;
-   font-size: var(--small);
-   font-weight: bold;
-   background-color: var(--secondary);
-   
-   /* box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px; */
- 
-  }
 
-  
-
-dialog::backdrop {
-  background-color: rgba(0, 0, 0, 0.3);
-  /* background-color: rgba(196, 196, 196, 0.2); */
-  padding: 0px;
-}
 
 .modal-heading {
   width: cal(100% - 60px);
@@ -1207,7 +1186,7 @@ width: 700px;
   width: 310px;   
   aspect-ratio: 1/0.8;   
   height: max-content;   
-  border-radius: 3px;   
+  border-radius: 5px;   
   background-color: var(--secondary);   
   cursor: pointer;
   position: relative;
@@ -1220,7 +1199,7 @@ width: 700px;
   width: 100%;
   height: 35%;
   object-fit:cover;
-  border-radius: 3px 3px 0px 0px;
+  border-radius: 5px 5px 0px 0px;
   overflow: hidden;
   background-size: cover;
   background-position: center;
@@ -1366,9 +1345,7 @@ background-color: red;
       width: 100% - 40px;
       height: max-content;
       padding: 0px 20px; }
-  dialog { 
-     width: 75%;
-  }
+  
 
   .auth{
     padding: 0px;
