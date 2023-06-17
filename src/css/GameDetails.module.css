@@ -18,7 +18,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
 .game_details_image_overlay_text {
@@ -55,7 +55,39 @@
     height: max-content;
 }
 
+.game_details_heading {
+   font-size: var(--sub-heading);
+   font-weight: bold;
+   margin-bottom: 5px;
+}
 
+.game_details_content {
+    font-size: var(--medium);
+}
+
+.container {
+    margin-bottom: 25px;
+}
+
+.add_touranment_button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary);
+    font-weight: bold;
+    margin-bottom: 25px;
+    padding: 10px 0px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: var(--medium);
+    color: var(--territary);
+}
+
+.add_touranment_button:hover {
+    background-color: var(--territary);
+    color: white;
+}
 
 @media (min-width: 856px) and (max-width: 1090px) {
     .game_details_image { 
@@ -68,7 +100,5 @@
         height: 180px;
       }
     
-      .game_details_image_overlay_text { 
-        height: calc( 100% - 30px );
-      }
+     
 }  

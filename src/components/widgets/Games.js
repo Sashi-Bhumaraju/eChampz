@@ -7,6 +7,7 @@ import { GetAllGames } from '../../store';
 import { GetIconByName } from '../../assets/images/GetImagesByName';
 import GamesLoading from '../skeleton/GamesLoading';
 import { useNavigate } from 'react-router-dom';
+import ToLowerCaseRemoveWhiteSpace from '../../util/ToLowerCaseRemoveWhiteSpace';
 
 function Games () {
 
@@ -15,10 +16,11 @@ function Games () {
   const games = useSelector((state)=>state.games.allGames);
   const [getGames, data, isLoading, isError] = UseThunk(GetAllGames);
   const navigate = useNavigate();
-    const gameDetailsPage = (gameName) => {
-        console.log(gameName)
-            navigate(`game/${gameName}`);
-    }
+
+  const gameDetailsPage = (gameName) => {  
+        console.log(gameName)  
+            navigate(`game/${ToLowerCaseRemoveWhiteSpace(gameName)}`);   
+  }   
 
   useEffect( () => {
             if (games.length === 0) getGames();
