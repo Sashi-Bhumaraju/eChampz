@@ -18,11 +18,10 @@ dialog {
     
   
   dialog::backdrop {
-    background-color: rgba(0, 0, 0, 0.4);
-    /* background-color: rgba(196, 196, 196, 0.2); */
-    padding: 0px;
-    margin: 0px;
-    padding: 0px;
+    background-color: rgba(0, 0, 0, 0.4);    
+    /* background-color: rgba(196, 196, 196, 0.2); */       
+    padding: 0px;   
+    margin: 0px;  
   }
 
   .modal_bar {
@@ -66,10 +65,10 @@ dialog {
 
 @media (max-width: 855px) { 
     dialog {
-      /* margin: 0px; */
+      margin: 0px;
       padding: 0px;
-        width:100vw;
-        min-width: 10px;
+        min-width:100vw;
+      
         min-height: 100vh;
         border-radius: 0px;
        
