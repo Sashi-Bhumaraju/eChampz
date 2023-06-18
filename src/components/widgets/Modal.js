@@ -9,6 +9,7 @@ function Modal () {
     const naviagte = useNavigate()
     const { modalType } = useParams();
     const [ modalComponentName, setModalComponentName] = useState(null);
+    const [ modalComponent, setModalComponent] = useState(null);
 
     const showModal = () => {        
         const modal = document.getElementById("modal-data") 
@@ -23,22 +24,22 @@ function Modal () {
         naviagte(-1);  
     }   
 
-    var modalComponent = null;
+  
 
   useEffect(()=>{
 
     switch(modalType) {
-         case 'create-touranament' : modalComponent = <AddTournament/>; setModalComponentName('Create Tournament'); break;
+         case 'create-touranament' : setModalComponent( <AddTournament/>); setModalComponentName('Create Tournament'); break;
          default: naviagte(-1); return;
     }
     showModal()
   },[])  
   return (
         <dialog id='modal-data'> 
-            <div className={styles.modal_bar }>
+            {/* <div className={styles.modal_bar }>
                 <div className={styles  .close_modal_icon } onClick={closeModal}><IoMdArrowRoundBack/></div>
                 <div className={styles.modal_name} >{modalComponentName}</div>
-            </div>
+            </div> */}
             {/* <div className='modal-heading'>echampz wants you to login to application</div>
             <div className='modal-buttons'>   
                 <div className='modal-no' onClick={closeModal} > Cancel</div>   
