@@ -68,7 +68,7 @@ dialog {
     dialog {
         width:100%;
         min-width: 10px;
-        height: 100vh;
+        min-height: 100vh;
         border-radius: 0px;
        
      }
