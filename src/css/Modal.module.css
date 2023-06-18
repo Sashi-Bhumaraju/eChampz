@@ -12,6 +12,9 @@ dialog {
     background-color: var(--secondary);
     position: relative;
     border-radius: 5px;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
   }
   
     
@@ -42,8 +45,18 @@ dialog {
     border-bottom: 1px solid var(--territary);
     height: 55px;
     align-items: center;
+    background-color:  rgba(20, 23, 26,0.5);
+    backdrop-filter: blur(10px);
   }
 
+  .modal_body {
+    padding-top: 55px;
+    height: calc(100% - 75px);
+    overflow-y: auto;
+    margin: 0%;
+   padding: 20px;
+   padding-top: 55px;
+  }
   .close_modal_icon {
     font-size: var(--sub-heading);
     position: absolute;
@@ -79,5 +92,11 @@ dialog {
         border-radius: 1px;   
         
      }
+
+     .modal_body {
+      max-width: 450px;
+      min-width: 0px;
+      
+    }
 } 
 

@@ -36,17 +36,17 @@ function Modal () {
   },[])  
   return (
         <dialog id='modal-data'> 
-            {/* <div className={styles.modal_bar }>
+            <div className={styles.modal_bar }>
                 <div className={styles  .close_modal_icon } onClick={closeModal}><IoMdArrowRoundBack/></div>
                 <div className={styles.modal_name} >{modalComponentName}</div>
-            </div> */}
+            </div>
             {/* <div className='modal-heading'>echampz wants you to login to application</div>
             <div className='modal-buttons'>   
                 <div className='modal-no' onClick={closeModal} > Cancel</div>   
                 <div className='modal-yes'>Yeah</div>  
             </div> */}
-
-            {modalComponent}
+            <div className={styles.modal_body}>  {modalComponent} </div>
+           
         </dialog>    
     )    
 }           
