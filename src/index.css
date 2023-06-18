@@ -21,3 +21,8 @@ body, html, * {
 body, html {
   background-color: var(--secondary);
 }
+
+body {
+  margin: 0;
+  padding: 0;
+}
