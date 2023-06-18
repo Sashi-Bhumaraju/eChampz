@@ -22,6 +22,12 @@ dialog {
     /* background-color: rgba(196, 196, 196, 0.2); */       
     padding: 0px;   
     margin: 0px;  
+
+    margin: 0px;
+    padding: 0px;
+      min-width:100vw;
+      min-height: 100vh;
+      border-radius: 0px;
   }
 
   .modal_bar {
@@ -68,8 +74,8 @@ dialog {
       margin: 0px;
       padding: 0px;
         min-width:100vw;
-      
         min-height: 100vh;
+        height: 100vh;
         border-radius: 0px;
        
      }
