@@ -7,7 +7,7 @@ dialog {
     height: 80%;
     /* max-width: 550px; */
     width: 550px;
-   
+ 
     outline: none;
     min-width: 10px;
     background-color: var(--secondary);
@@ -66,7 +66,9 @@ dialog {
 
 @media (max-width: 855px) { 
     dialog {
-        width:100%;
+      /* margin: 0px; */
+      padding: 0px;
+        width:100vw;
         min-width: 10px;
         min-height: 100vh;
         border-radius: 0px;
