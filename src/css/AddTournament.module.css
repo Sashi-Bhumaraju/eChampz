@@ -1,4 +1,58 @@
-.add_tournament {
-    max-width: 400px;
+.add_tournament { 
+    min-width: 100%; 
+    /* display: flex; 
+    flex-direction: column;  */
+    /* background-color: gray; */
+    height: calc(100% - 20px);
+   padding-top: 20px;
 }
 
+.add_tournament_input {
+    margin-bottom: 25px;
+}
+
+.add_tournament_input_heading {
+    font-size: var(--small);
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.add_tournament_submit_button {
+    margin: 10px 0px;
+    margin-top: 45px    ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--small);
+    font-weight: bold;
+    background-color: var(--primary);
+    border-radius: 5px;  
+    padding: 8px 10px;  
+    cursor: pointer;  
+    color: var(--territary);  
+    width: calc(100% - 20px);  
+
+}
+.add_tournament_submit_button:active {
+    background-color: var(--territary);
+    color: white;
+}
+
+.add_tournament_cancel_button {
+    margin: 25px 0px;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--small);
+    font-weight: bold;
+    /* background-color: var(--primary); */
+    border-radius: 5px;
+    padding: 8px 10px;
+    cursor: pointer;
+  
+}
+
+.add_tournament_cancel_button{
+    background-color: var(--fourtary);
+}

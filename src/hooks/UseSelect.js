@@ -26,7 +26,7 @@ function UseSelect (options,placeholder) {
 
                         control:  (baseStyles)=>({
                             ...baseStyles,
-                            backgroundColor : "#232b3b",
+                            backgroundColor : "var(--fourtary)",
                             border :"none",
                             borderColor: "none",
                             color: "white",
@@ -39,7 +39,7 @@ function UseSelect (options,placeholder) {
                         }),
                         menu:  (baseStyles, state)=>({
                             ...baseStyles,
-                            backgroundColor : "#232b3b",
+                            backgroundColor : "var(--fourtary)",
                             border :"none",
                             borderColor: "none",
                             color: "white",
@@ -48,13 +48,13 @@ function UseSelect (options,placeholder) {
                         }),
                         option:  (baseStyles, state)=>({
                             ...baseStyles,
-                            backgroundColor : "#232b3b",
+                            backgroundColor : "var(--fourtary)",
                             border :"none",
                             borderColor: "none",
                             color: "white",
                             width:"100%",
                             ":hover" : {
-                                backgroundColor : "var(--primary)"
+                                backgroundColor : "var(--secondary)"
                             },
                             fontSize: "var(--small)"
                             
