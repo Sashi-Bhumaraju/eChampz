@@ -51,7 +51,7 @@ dialog {
 
   .modal_body {
     padding-top: 65px;
-    width: 100%;
+    width: calc(100% - 40px);
     height: calc(100% - 85px);
     overflow-y: auto;
     margin: 0%;
@@ -97,8 +97,9 @@ dialog {
      }
 
     .modal_body {
-      max-width: 450px;
+      max-width: calc(450px - 20px);
       min-width: 0px;
+      /* background-color: red; */
     }
 
     .modal_bar {

@@ -1519,7 +1519,9 @@ background-color: red;
 
   .dashboard-content-container {
     max-width: 450px;
-    height: 100%;
+    min-height: 100%;
+    height: max-content;
+    /* background-color: red; */
   }
 
   .app-bar {
