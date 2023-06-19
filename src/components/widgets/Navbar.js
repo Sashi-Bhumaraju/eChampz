@@ -29,7 +29,7 @@ function Navbar () {
         
         <div className="navbar">
 
-            <div style={{}} className="app-name">eChampz!</div> 
+            <div style={{}} className="app-name">  eChampz!</div> 
             <NavLink  className={navStyles} to="/dashboard/tournaments"> {renderIcons(<HiOutlineHome></HiOutlineHome>,'Tournaments') } </NavLink>
             <NavLink className={navStyles} to="/dashboard/chat"> {renderIcons(  <HiOutlineChatAlt></HiOutlineChatAlt>,'chat') } </NavLink>
             <NavLink className={navStyles}  to="/dashboard/my-tournaments">{renderIcons( <AiOutlineTrophy></AiOutlineTrophy>,'My Tournaments') } </NavLink>

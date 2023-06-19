@@ -20,7 +20,7 @@ dialog {
     
   
   dialog::backdrop {
-    background-color: rgba(0, 0, 0, 0.4);    
+    background-color: rgba(0, 0, 0, 0.7);    
     /* background-color: rgba(196, 196, 196, 0.2); */       
     padding: 0px;   
     margin: 0px;  
@@ -50,8 +50,8 @@ dialog {
   }
 
   .modal_body {
-    padding-top: 55px;
-    height: calc(100% - 75px);
+    padding-top: 65px;
+    height: calc(100% - 85px);
     overflow-y: auto;
     margin: 0%;
    padding: 20px;
@@ -82,21 +82,25 @@ dialog {
   }
 
 @media (max-width: 855px) { 
+
     dialog {
-      margin: 0px;
-      padding: 0px;
-        min-width:100vw;
-        width: 100vw;
-        min-height: 100vh;
-        height: 100vh;
-        border-radius: 1px;   
-        
+      margin: 0px;  
+      padding: 0px;  
+        min-width:100vw;  
+        width: 100vw;  
+        min-height: 100vh;  
+        height: 100vh;  
+        border-radius: 1px;  
      }
 
-     .modal_body {
+    .modal_body {
       max-width: 450px;
       min-width: 0px;
-      
     }
+
+    .modal_bar {
+      position: fixed;
+    }
+
 } 
 
