@@ -55,9 +55,20 @@ function GameDetails() {
               <div className={styles.game_details_heading}>Multiplayer</div>
               <div className={styles.game_details_content}> {game.multiplayer===true? `Yes, ${game.gameName} is a multi player video game` : `No, ${game.gameName} is not a multi player video game`} </div>
           </div>
-          <Outlet>
 
-          </Outlet>
+          <div className={styles.container}>
+              <div className={styles.game_details_heading}>Tornament Formats</div>
+              <div className={styles.game_details_content}> {game.tournamentFormat.map((format => {return <li>{format}</li>}))} </div>
+          </div>
+
+          <div className={styles.container}>
+              <div className={styles.game_details_heading}>Team Mode</div>
+              <div className={styles.game_details_content}> {game.teamMode.map(mode=>{return <li>{mode}</li>  })} </div>
+          </div>
+
+          <Outlet/>
+
+         
     </div> 
   )
 }

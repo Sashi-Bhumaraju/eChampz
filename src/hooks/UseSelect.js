@@ -1,41 +1,58 @@
 import React,{ useState} from 'react';
 import Select from 'react-select';
 
-function UseSelect (options,placeholder) {
+function UseSelect ({options,placeholder,intialDisabledValue}) {
+
     const optionsList = options.map((option)=>{
       return  { value: option, label: option }
     });
 
-    const [value, setvalue] = useState(null);
+    const resetValue = () => {
+        console.log('inside reset')
+        setvalue(null);
+    }
 
-    const selectComponent =    <Select
+    const disableThiscomponent = (isDisabled) => {
+        setIsDisabled(isDisabled);
+    }
+
+    const [value, setvalue] = useState(null);
+    const [isDisabled,setIsDisabled] = useState(intialDisabledValue);
+
+    const SelectComponent =    <Select
+                    value={value}
                     defaultValue={value}
                     options={optionsList}
                     placeholder={placeholder}
                     onChange={setvalue}
                     isSearchable={false}
-                    noOptionsMessage={()=>"No gender found.."}
+                    isDisabled={isDisabled}
+                    noOptionsMessage={()=>""}
                     styles={{
                         dropdownIndicator: (baseStyles) => ({
                             ...baseStyles,
-                            color: "white",
+                            color: "black",
                             fontSize: "var(--small)",
-                            width:"100%"
-                        
+                            width:"100%",
                         }),
 
-                        control:  (baseStyles)=>({
+                        control:  (baseStyles,state)=>({
                             ...baseStyles,
-                            backgroundColor : "var(--fourtary)",
+                            // backgroundColor : "var(--fourtary)",
                             border :"none",
                             borderColor: "none",
                             color: "white",
                             fontSize: "var(--small)",
                             height:10,
                             width:"100%",
-                            ":focus":{
-                                border:"none"
-                            }
+                            backgroundColor: state.isFocused ? 'var(--territary)' : "var(--fourtary)",
+                            outline: state.isFocused ?  '1px var(--primary) solid' : 'none',
+                            cursor:'pointer',
+                            // ":focus":{ 
+                            //     ...baseStyles[':focus'],
+                            //     backgroundColor:'black',
+                            //     outline: '1px var(--primary) solid',
+                            // }
                         }),
                         menu:  (baseStyles, state)=>({
                             ...baseStyles,
@@ -63,7 +80,7 @@ function UseSelect (options,placeholder) {
                             ...baseStyles,
                             color:"white",
                             width:"100%",
-                           
+                          
                             fontSize: "var(--small)",
                         ":focus":{
                                 border:"none"
@@ -72,12 +89,13 @@ function UseSelect (options,placeholder) {
                         placeholder: (baseStyles)=>({
                             ...baseStyles,
                             fontSize: "var(--small)",
-                            width:"100%"
+                            width:"100%",
+                           
                         }),
                         
                     }}
                 />   
-    return [value,selectComponent]
+    return [SelectComponent,value,resetValue,disableThiscomponent];
 }
 
 export default UseSelect;

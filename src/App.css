@@ -52,25 +52,32 @@ body, * {
 ::-webkit-scrollbar {
   /* width: 1px; */
   /* height: 100px; */
+  /* background-color: red; */
  
 }
 
 
 ::-webkit-scrollbar-track {
-  /* background: transparent;; */
-  
+  /* background: red;; */
+  border-radius: 50px;
 }
 
 
 ::-webkit-scrollbar-thumb {
-  /* background: white; */
-  padding: 10px;
+  /* background:red; */
+  /* background-color: green;
+  color: green; */
+  /* border-radius: 50px;
+  height: 2px;
+  width: 2px;
+  padding: 10px; */
 }
 
 
 ::-webkit-scrollbar-thumb:hover {
   /* background: #555; */
   /* padding: 10px; */
+  /* border-radius: 50px; */
 }
 
 
